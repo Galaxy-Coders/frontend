@@ -6,6 +6,14 @@
   font-family: HelveticaNeueCyr;
   src: url(./fonts/HelveticaNeueCyr\ Bold.ttf);
 }
+@font-face {
+  font-family: Steinbeck;
+  src: url(./fonts/Steinbeck\ Reg\ Regular.otf);
+}
+@font-face {
+  font-family: Visuelt Pro;
+  src: url(./fonts/VisueltPro-Regular.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -41,7 +49,12 @@ body {
   background-position: right 260px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav-fixed {
+  z-index: 9999999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +92,7 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  font-family: he;
+  font-family: HelveticaNeueCyr;
 }
 .nav-fixed .ul-desktop li:hover a {
   color: var(--white);
@@ -201,6 +214,7 @@ header .search-bar .s-bottom .search-inp {
   font-size: 19px;
   color: var(--text-gray);
   transition: 0.5s;
+  font-family: Steinbeck;
 }
 header .search-bar .s-bottom .search-inp:focus {
   color: var(--white);
@@ -229,6 +243,7 @@ header .search-bar .s-bottom button {
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: 12px center;
+  font-family: Steinbeck;
   cursor: pointer;
   color: var(--brown);
 }
@@ -244,6 +259,10 @@ header .search-bar .s-bottom button {
 }
 .main-books .bottom {
   margin-top: 50px;
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .main-books .bottom .card {
   width: 170px;
@@ -267,4 +286,26 @@ header .search-bar .s-bottom button {
   font-size: 20px;
   font-weight: 400;
   margin-top: 17px;
+}
+.main-books .bottom .card .card-bottom span {
+  font-family: Visuelt Pro;
+  font-size: 12px;
+  color: var(--light-gray);
+  font-weight: 300;
+  line-height: 144.4%;
+  margin-top: 1.3px;
+}
+.main-books .bottom .card .card-bottom div {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 3.8px;
+}
+.main-books .bottom .card .card-bottom div h3 {
+  color: var(--light-gray);
+  font-family: Visuelt Pro;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 144.4%;
 }/*# sourceMappingURL=style.css.map */
