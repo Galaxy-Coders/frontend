@@ -23,6 +23,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    // border: 1px solid red;
 }
 
 :root {
@@ -36,6 +37,7 @@
     --cream: #C9AC8C;
     --text-gray: rgba(255, 255, 255, 0.30);
     --brown: #3C2710;
+    --author-p:rgba(255, 255, 255, 0.80);
     --author-card-gradient:linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
 }
 
@@ -57,6 +59,8 @@ body {
 a{
     text-decoration: none;
 }
+
+// navbar styles
 
 .nav-fixed {
     z-index: 9999999;
