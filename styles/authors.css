@@ -47,6 +47,8 @@ body {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
 }
 .authors .bottom .card {
   width: 173.33px;
@@ -54,23 +56,23 @@ body {
   background: var(--author-card-gradient);
   box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
 }
-.authors .bottom .card .card-top {
-  width: 173.983px;
-  height: 132.186px;
-}
-.authors .bottom .card .card-top img {
-  width: 100%;
-  height: 100%;
-}
 .authors .bottom .card .card-bottom {
-  padding: 12px 12px 24px 12px;
+  height: 45%;
   text-align: center;
-  background-image: url("../imgs/author naqsh1.svg"), url("../imgs/muallif naqsh2.svg");
+  background-image: url("../imgs/author naqsh1.svg");
   background-repeat: no-repeat;
-  background-position: top right, bottom left;
-  background-position-y: -50px, 60px;
+  background-position: top right;
+  background-position-y: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  gap: 12px;
 }
-.authors .bottom .card .card-bottom h2 {
+.authors .bottom .card .card-bottom .author-info {
+  flex: 1;
+}
+.authors .bottom .card .card-bottom .author-info h2 {
   color: var(--cream);
   font-family: Steinbeck;
   font-size: 20px;
@@ -78,7 +80,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.authors .bottom .card .card-bottom p {
+.authors .bottom .card .card-bottom .author-info p {
   color: var(--light-gray);
   font-family: Steinbeck;
   font-size: 12px;
@@ -90,7 +92,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 32px;
-  margin-top: 9.79px;
+  margin-top: auto;
+  margin-bottom: 12px;
 }
 .authors .bottom .card .card-bottom .card-info div {
   display: flex;
@@ -103,4 +106,12 @@ body {
   font-size: 16px;
   font-weight: 400;
   margin-left: 4px;
+}
+.authors .bottom .card-top {
+  width: 173.983px;
+  height: 55%;
+}
+.authors .bottom .card-top img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=authors.css.map */
