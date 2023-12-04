@@ -132,6 +132,11 @@
         }
       }
 
+      .asarlar-notscroll{
+        overflow: hidden;
+        flex-wrap: wrap;
+      }
+
       .bottom {
         width: 704px !important;
         margin-top: 13px;

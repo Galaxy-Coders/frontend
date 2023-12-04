@@ -112,6 +112,10 @@
   font-size: 1rem;
   cursor: pointer;
 }
+.author .right .asarlari .asarlar-notscroll {
+  overflow: hidden;
+  flex-wrap: wrap;
+}
 .author .right .asarlari .bottom {
   width: 704px !important;
   margin-top: 13px;
