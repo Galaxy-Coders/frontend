@@ -54,7 +54,7 @@ a {
 }
 
 .nav-fixed {
-  z-index: 9999999;
+  z-index: 100;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -85,7 +85,7 @@ a {
     display: flex;
     align-items: center;
     list-style: none;
-    margin-left: 200px;
+    margin-left: 350px;
 
     li {
       display: flex;
@@ -121,7 +121,7 @@ a {
         color: var(--light-gray);
         text-decoration: none;
         transition: .5s;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
@@ -165,6 +165,7 @@ a {
     height: 4px;
     background: var(--white);
     border-radius: 5px;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -190,6 +191,201 @@ a {
   }
 }
 
+.header-fixer{
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+  opacity: 0;
+  top: 0;
+  width: 70%;
+  height: 100vh;
+  background: var(--black);
+  flex-direction: column;
+  box-shadow: 0 0 20px var(--black);
+  transform: translateX(535px);
+  animation: fixer .7s ease-out forwards;
+
+  @keyframes fixer {
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  .top{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid var(--gray) 2px;
+
+
+    .profile {
+      background-size: cover;
+      cursor: pointer;
+      display: flex;
+      user-select: none;
+      position: absolute;
+      left: 70px;
+  
+      button {
+        padding: 5px 15px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 2px 3px var(--red);
+        border: none;
+        height: fit-content;
+        outline: none;
+        color: var(--red);
+        background: var(--black);
+        cursor: pointer;
+  
+        a {
+          color: var(--red);
+        }
+      }
+  
+      .log {
+        box-shadow: 0 0 2px 3px var(--green);
+        color: var(--green);
+  
+        a {
+          color: var(--green);
+        }
+      }
+    }
+
+    .clear-btn{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &::before{
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: var(--white);
+        position: absolute;
+        transform: rotate(-45deg);
+        border-radius: 10px;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: var(--white);
+        border-radius: 10px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .center{
+    display: flex;
+    // justify-content: ;
+    align-items: center;
+
+    .ul-tablet{
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 100px 0;
+      li{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        width: fit-content;
+        position: relative;
+        overflow: hidden;
+        transition: .5s;
+
+        &::before{
+          content: '';
+          width: 100%;
+          height: 5px;
+          bottom: -5px;
+          background: var(--white);
+          position: absolute;
+          border-radius: 10px;
+          transition: .5s;
+        }
+
+        &:hover::before{
+          bottom: 5px;
+        }
+
+        &:hover{
+          transform: scale(1.2);
+        }
+
+        
+        &:hover a{
+          color: var(--white);
+        }
+        a{
+          font-size: 2rem;
+          text-align: center;
+          color: var(--text-gray);
+        }
+      }
+    }
+  }
+}
+
+.nowork{
+  animation: nowork .7s ease-in forwards;
+  @keyframes nowork {
+    0%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    100%{
+      transform: translateX(535px);
+      opacity: 0;
+    }
+  }
+}
+
+.head-nowork{
+  z-index: -190;
+  animation: work .7s linear forwards;
+  @keyframes work {
+    100%{
+      opacity: 0;
+    }
+  }
+}
+
+.head-bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;top: 0;
+  opacity: 0;
+  display: none;
+  background: var(--gray);
+  backdrop-filter: blur(10px);
+  animation: bg .7s linear forwards;
+  z-index: 190;
+
+  @keyframes bg {
+    100%{
+      opacity: 1;
+    }
+  }
+}
+
 header {
   width: 100%;
   height: fit-content;
@@ -197,14 +393,73 @@ header {
   padding-top: 130px;
   flex-direction: column;
   align-items: center;
-
   .slider {
     width: 80%;
     height: 340px;
-    background-image: url(imgs/Group\ 2.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .img{
+      overflow: hidden;
+      user-select: none;
+      .slide-img{
+        display: flex;
+
+        img{
+          width: 100%;
+          user-select: none;
+          transition: .5s;
+        }
+      }
+    }
+    
+    .slider-text{
+      width: 340px;
+      height: 100%;
+      position: absolute;
+      left: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      h1{
+        height: 70%;
+        width: 100%;
+        font-size: 3rem;
+        font-weight: 100;
+        font-family: Rotterburg Stylish FREE;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: var(--cream);
+      }
+  
+      .slide-btn{
+        display: flex;
+        width: 100%;
+        height: 26%;
+        // border: 1px solid red;
+        justify-content: space-between;
+
+  
+        div{
+          width: 75px;
+          height: 4px;
+          background: var(--text-gray);
+          border-radius: 5px;
+          transition: .5s;
+          cursor: pointer;
+          user-select: none;
+        }
+        
+        .slide-1{
+          background: var(--white);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+
   }
 
   .search-bar {
@@ -223,6 +478,7 @@ header {
       color: var(--cream);
       margin-bottom: 20px;
       font-family: Rotterburg Stylish FREE;
+      // border: solid red;
     }
 
     .s-bottom {
@@ -366,6 +622,7 @@ footer {
   padding: 0 120px;
   border-top: solid var(--light-gray) 2px;
   justify-content: space-between;
+  overflow: hidden;
 
   .foot-logo {
     font-size: 2.2rem;
@@ -384,98 +641,18 @@ footer {
     color: var(--white);
   }
 
-  .left {
+  .right{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
+    width: 45%;
 
-    .logo-con {
+    .logo-con{
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      transition: .5s;
-
-      &:hover .img img {
-        display: inline-block;
-      }
-
-      .img {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        transition: .5s;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          transition: .5s;
-          aspect-ratio: 3/2;
-          display: none;
-        }
-      }
-    }
-
-    .youtube {
-      position: relative;
-
-      .img {
-        background-image: url(imgs/youtube2.svg);
-        background-size: 92%;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: 100;
-
-        img {
-          width: 90%;
-          margin-left: 2px;
-        }
-      }
-    }
-
-    .tg {
-      .img {
-        background-image: url(imgs/telegram2.svg);
-        background-size: 78%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        img {
-          width: 75%;
-          margin-left: -1px;
-        }
-      }
-    }
-
-    .insta {
-      .img {
-        background-image: url(imgs/Instagram-Logo.wine2.svg);
-        background-size: 150%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        img {
-          width: 110%;
-          margin-left: .1px;
-        }
-      }
-    }
-
-    .twit {
-      .img {
-        background-image: url(imgs/twitter2.svg);
-        background-size: 82%;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        img {
-          width: 80%;
-          margin-left: -1px;
-        }
+      
+      img{
+        padding: 0 5px;
       }
     }
   }
