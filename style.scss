@@ -8,6 +8,16 @@
   src: url(./fonts/HelveticaNeueCyr\ Bold.ttf);
 }
 
+@font-face {
+  font-family: Steinbeck;
+  src: url(./fonts/Steinbeck\ Reg\ Regular.otf);
+}
+
+@font-face {
+  font-family: Visuelt Pro;
+  src: url(./fonts/VisueltPro-Regular.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -19,13 +29,14 @@
   --black: #191919;
   --white: #fff;
   --gray: #ffffff1a;
-  --light-gray: #ffffff7f;
+  --light-gray: rgba(255, 255, 255, 0.60);
   --white-gray: #404040;
   --red: #f00;
   --green: lawngreen;
   --cream: #C9AC8C;
   --text-gray: rgba(255, 255, 255, 0.30);
   --brown: #3C2710;
+  --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
 }
 
 body {
@@ -43,16 +54,19 @@ a {
 }
 
 .nav-fixed {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: solid var(--gray) 2px;
-  position: fixed;
+  z-index: 9999999;
   width: 100%;
   height: fit-content;
-  padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  top: 0;
+  left: 0;
+  position: fixed;
   background: var(--black);
-  z-index: 99999999;
+  padding: 0 120px;
+  border-bottom: solid var(--light-gray) 2px;
 
   .nav-logo {
     font-size: 2rem;
@@ -73,24 +87,6 @@ a {
     list-style: none;
     margin-left: 200px;
 
-    .home{
-      a{
-        color: var(--white);
-        transform: scale(1.2);
-      }
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        border-radius: 10px;
-        background: var(--white);
-        left: 0;
-        bottom: 0px;
-        transition: .5s;
-      }
-    }
-    
     li {
       display: flex;
       align-items: center;
@@ -220,7 +216,6 @@ header {
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    z-index: 1;
     flex-direction: column;
     border: solid var(--white-gray) 1px;
 
@@ -241,6 +236,16 @@ header {
         font-size: 19px;
         color: var(--text-gray);
         transition: .5s;
+        font-family: Steinbeck;
+
+        &::-webkit-search-cancel-button {
+          appearance: none;
+          height: 20px;
+          width: 20px;
+          background-image: url(./imgs/close-button-svgrepo-com.svg);
+          background-size: 20px 20px;
+          fill: var(--cream);
+        }
 
         &:focus {
           color: var(--white);
@@ -266,12 +271,14 @@ header {
         background-repeat: no-repeat;
         background-size: 30px;
         background-position: 12px center;
+        font-family: Steinbeck;
         cursor: pointer;
         color: var(--brown);
       }
     }
   }
 }
+
 
 .main-books {
   margin-top: 30px;
@@ -287,6 +294,10 @@ header {
 
   .bottom {
     margin-top: 50px;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
     .card {
       width: 170px;
@@ -313,6 +324,157 @@ header {
           font-size: 20px;
           font-weight: 400;
           margin-top: 17px;
+        }
+
+        span {
+          font-family: Visuelt Pro;
+          font-size: 12px;
+          color: var(--light-gray);
+          font-weight: 300;
+          line-height: 144.4%;
+          margin-top: 1.3px;
+        }
+
+        div {
+          display: inline-flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 7px;
+          margin-top: 3.8px;
+
+          h3 {
+            color: var(--light-gray);
+            font-family: Visuelt Pro;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 144.4%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+////////////////********* footer style *********\\\\\\\\\\\\
+
+footer {
+  width: 100%;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  border-top: solid var(--light-gray) 2px;
+  justify-content: space-between;
+
+  .foot-logo {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    user-select: none;
+    cursor: pointer;
+
+    a {
+      color: var(--cream);
+      text-decoration: none;
+      font-family: Rotterburg Stylish FREE;
+    }
+  }
+
+  p {
+    color: var(--white);
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+    .logo-con {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: .5s;
+
+      &:hover .img img {
+        display: inline-block;
+      }
+
+      .img {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        transition: .5s;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          transition: .5s;
+          aspect-ratio: 3/2;
+          display: none;
+        }
+      }
+    }
+
+    .youtube {
+      position: relative;
+
+      .img {
+        background-image: url(imgs/youtube2.svg);
+        background-size: 92%;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 100;
+
+        img {
+          width: 90%;
+          margin-left: 2px;
+        }
+      }
+    }
+
+    .tg {
+      .img {
+        background-image: url(imgs/telegram2.svg);
+        background-size: 78%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        img {
+          width: 75%;
+          margin-left: -1px;
+        }
+      }
+    }
+
+    .insta {
+      .img {
+        background-image: url(imgs/Instagram-Logo.wine2.svg);
+        background-size: 150%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        img {
+          width: 110%;
+          margin-left: .1px;
+        }
+      }
+    }
+
+    .twit {
+      .img {
+        background-image: url(imgs/twitter2.svg);
+        background-size: 82%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        img {
+          width: 80%;
+          margin-left: -1px;
         }
       }
     }
