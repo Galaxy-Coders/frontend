@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "line",
+  "editor.multiCursorModifier": "alt",
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "expand"
+}
