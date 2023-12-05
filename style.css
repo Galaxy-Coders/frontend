@@ -533,7 +533,7 @@ header .search-bar .s-bottom button {
   display: flex;
   gap: 35px;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .main-books .bottom .card {
   width: 170px;
