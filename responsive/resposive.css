@@ -1,0 +1,61 @@
+@media screen and (max-width: 768px) {
+  .nav-fixed {
+    padding: 0 60px;
+    height: 85px;
+  }
+  .nav-fixed .ul-desktop {
+    display: none;
+  }
+  .nav-fixed .profile {
+    display: none;
+  }
+  .nav-fixed .gamburger-menu {
+    display: flex;
+  }
+  header .slider {
+    width: 100%;
+    height: 220px;
+    border-radius: 0;
+    background-size: 103%;
+    justify-content: center;
+  }
+  header .slider .img {
+    display: flex;
+  }
+  header .slider .slider-text {
+    width: 220px;
+    left: 60px;
+  }
+  header .slider .slider-text h1 {
+    font-size: 2.2rem;
+  }
+  header .slider .slider-text .slide-btn div {
+    width: 45px;
+  }
+  header .search-bar {
+    width: 550px;
+    height: 100px;
+    justify-content: space-evenly;
+    transform: translateY(-40px);
+  }
+  header .search-bar h1 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  header .search-bar .s-bottom .search-inp {
+    width: 400px;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  header .search-bar .s-bottom button {
+    padding: 4px 20px 4px 30px;
+    background-size: 18px;
+    border-radius: 10px;
+    background-position: 10px 9px;
+  }
+  .main-books {
+    margin-top: 0px;
+    padding: 0 92px;
+  }
+}/*# sourceMappingURL=resposive.css.map */

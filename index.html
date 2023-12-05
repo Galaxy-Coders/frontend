@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Badiiyat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./responsive/resposive.css">
+    <link rel="shortcut icon" href="./imgs/kitob.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -22,14 +24,55 @@
             <li><a href="#">Forum</a></li>
         </ul>
         <div class="profile">
-            <button class="log">Log in</button>
-            <button class="sign">Sign up</button>
+            <button class="log"><a href="pages/register.html  ">Sign in</a></button>
+            <button class="sign"><a href="pages/login.html">Sign up</a></button>
         </div>
         <div class="gamburger-menu"></div>
     </nav>
 
+    <div class="header-fixer">
+        <div class="top">
+            <div class="profile">
+                <button class="log">Log in</button>
+                <button class="sign">Sign up</button>
+            </div>
+            <div class="clear-btn"></div>
+        </div>
+        <div class="center">
+            <ul class="ul-tablet">
+                <li><a href="#">Bosh sahifa</a></li>
+                <li><a href="#">Kitoblar</a></li>
+                <li><a href="#">Maqolalar</a></li>
+                <li><a href="./pages/authors.html">Mualliflar</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="head-bg"></div>
+
     <header>
-        <div class="slider"></div>
+        <div class="slider">
+            <div class="img">
+                <div class="slide-img">
+                    <img class="first-img" src="imgs/Group 2.png" alt="">
+                    <img src="imgs/Group 2.png" alt="">
+                    <img src="imgs/Group 2.png" alt="">
+                    <img src="imgs/Group 2.png" alt="">
+                </div>
+            </div>
+            <div class="slider-text">
+                <h1>
+                    Temuriylar davri adabiyoti
+                </h1>
+                <div class="slide-btn">
+                    <div class="slide-1 slide-a"></div>
+                    <div class="slide-2 slide-a"></div>
+                    <div class="slide-3 slide-a"></div>
+                    <div class="slide-4 slide-a"></div>
+                </div>
+            </div>
+        </div>
         <div class="search-bar">
             <h1>Qidirish</h1>
             <div class="s-bottom">
@@ -229,6 +272,38 @@
             </a>
         </div>
     </div>
+
+    <footer>
+        <div class="foot-logo">
+            <a href="#">badiiyat</a>
+        </div>
+
+        <p class="center">
+            Biz bilan bog'lanish | +998 90 781 79 49
+        </p>
+
+        <div class="right">
+            <a href="#" class="logo-con">
+                <img width="50" src="imgs/youtube.png" alt="">
+                <p>You Tube</p>
+            </a>
+            <a href="#" class="logo-con">
+                <img width="45" src="imgs/Telegram.webp" alt="">
+                <p>Telegram</p>
+            </a>
+            <a href="#" class="logo-con">
+                <img width="45" src="imgs/Insta.png" alt="">
+                <p>Instagram</p>
+            </a>
+            <a href="#" class="logo-con">
+                <img width="50" src="imgs/twitter.png" alt="">
+                <p>Twitter</p>
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
