@@ -65,7 +65,9 @@ function kitob_tavsiya() {
   kt_bottom.classList.toggle('kt_notscroll');
 }
 
-function iqtibos_clicked(){
-  const iqtibos = document.querySelector('.iqtibos');
-  const taqriz = document.querySelector('.taqriz');
-} 
+const iqtibos = document.querySelector('.iqtibos');
+const taqriz = document.querySelector('.taqriz');
+const iqtibos_li = document.querySelector('.iqtibos-li')
+const taqriz_li = document.querySelector('.taqriz-li')
+
+iqtibos_li.style.color = 'var(--cream)';

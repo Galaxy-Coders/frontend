@@ -42,6 +42,7 @@ body {
 }
 .authors .top .category ul li button:hover {
   color: var(--cream);
+  transform: scale(1.2) translateY(-2px);
 }
 .authors .bottom {
   margin-top: 50px;
@@ -55,6 +56,9 @@ body {
   border-radius: 15px;
   background: var(--author-card-gradient);
   box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+}
+.authors .bottom .card:hover .card-bottom .author-info h2 {
+  color: var(--cream);
 }
 .authors .bottom .card .card-bottom {
   height: 45%;
@@ -73,12 +77,13 @@ body {
   flex: 1;
 }
 .authors .bottom .card .card-bottom .author-info h2 {
-  color: var(--cream);
+  color: var(--text-gray);
   font-family: Steinbeck;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: 0.5s;
 }
 .authors .bottom .card .card-bottom .author-info p {
   color: var(--light-gray);

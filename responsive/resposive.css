@@ -1,3 +1,8 @@
+@media screen and (max-width: 1536px) {
+  .main-books .bottom .card-13, .main-books .bottom .card-14 {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav-fixed {
     padding: 0 60px;

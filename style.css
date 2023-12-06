@@ -588,6 +588,127 @@ header .search-bar .s-bottom button {
   line-height: 144.4%;
 }
 
+.contact-us {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  margin: 50px 0;
+}
+.contact-us .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us .left .img {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-image: url(imgs/operator.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contact-us .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us .right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 340px;
+}
+.contact-us .right form input {
+  border-radius: 10px;
+  padding: 10px 25px;
+  outline: none;
+  border: solid gray 1px;
+  background: transparent;
+  margin: 10px 0;
+  color: gray;
+  font-family: Steinbeck;
+  transition: 0.5s;
+}
+.contact-us .right form input:focus {
+  color: var(--white);
+  transform: scale(1.05);
+}
+.contact-us .right form input:focus::-moz-placeholder {
+  color: var(--white);
+}
+.contact-us .right form input:focus::placeholder {
+  color: var(--white);
+}
+.contact-us .right form input::-moz-placeholder {
+  font-family: Steinbeck;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact-us .right form input::placeholder {
+  font-family: Steinbeck;
+  transition: 0.5s;
+}
+.contact-us .right form input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+.contact-us .right form textarea {
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 25px;
+  margin: 10px 0;
+  color: gray;
+  resize: none;
+  transition: 0.5s;
+  font-family: Steinbeck;
+}
+.contact-us .right form textarea:focus {
+  color: var(--white);
+  transform: scale(1.05);
+}
+.contact-us .right form textarea:focus::-moz-placeholder {
+  color: var(--white);
+}
+.contact-us .right form textarea:focus::placeholder {
+  color: var(--white);
+}
+.contact-us .right form textarea::-moz-placeholder {
+  font-family: Steinbeck;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact-us .right form textarea::placeholder {
+  font-family: Steinbeck;
+  transition: 0.5s;
+}
+.contact-us .right form button {
+  padding: 10px 25px;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  margin: 10px 0;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 15px;
+  background: #C9AC8C;
+  color: var(--brown);
+  font-family: Steinbeck;
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact-us .right form button:hover {
+  box-shadow: 0 0 10px var(--hover-blue-black);
+  color: var(--white);
+  transform: scale(1.1);
+  background: var(--hover-blue-black);
+}
+
 footer {
   width: 100%;
   height: 105px;
