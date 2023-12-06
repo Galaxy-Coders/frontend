@@ -246,7 +246,7 @@ body {
   width: 15%;
 }
 .kitob-haqida .bottom .taqriz {
-  display: flex;
+  display: none;
   gap: 30px;
   overflow-x: scroll;
 }
