@@ -18,7 +18,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cream);
+  border-radius: 10px;
 }
 
 :root {
@@ -30,8 +38,11 @@
   --red: #f00;
   --green: lawngreen;
   --cream: #C9AC8C;
+  --light-cream: rgba(201, 172, 140, 0.93);
   --text-gray: rgba(255, 255, 255, 0.30);
   --brown: #3C2710;
+  --light-blue: #549FF9;
+  --black-blue: #152540;
   --author-p: rgba(255, 255, 255, 0.80);
   --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
   --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
@@ -93,7 +104,6 @@ li {
   display: flex;
   align-items: center;
   list-style: none;
-  margin-left: 350px;
 }
 .nav-fixed .ul-desktop li {
   display: flex;
@@ -124,39 +134,34 @@ li {
 }
 .nav-fixed .ul-desktop li a {
   color: var(--light-gray);
-  text-decoration: none;
+  font-family: HelveticaNeueCyr;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 144.4%;
   transition: 0.5s;
-  font-size: 1rem;
 }
 .nav-fixed .profile {
   background-size: cover;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  gap: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.nav-fixed .profile button {
-  margin-right: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 3px var(--red);
-  border: none;
-  outline: none;
-  color: var(--red);
-  background: var(--black);
-  cursor: pointer;
-  display: flex;
-}
-.nav-fixed .profile button a {
-  padding: 5px 15px;
-  color: var(--red);
+.nav-fixed .profile .sign {
+  border-radius: 15px;
+  background: #C9AC8C;
+  padding: 10px 30px;
+  color: var(--brown);
+  font-family: Steinbeck;
+  font-weight: 400;
 }
 .nav-fixed .profile .log {
-  box-shadow: 0 0 2px 3px var(--green);
-  color: var(--green);
-}
-.nav-fixed .profile .log a {
-  color: var(--green);
+  color: var(--light-gray);
+  font-family: Steinbeck;
+  font-weight: 400;
 }
 .nav-fixed .gamburger-menu {
   display: none;
@@ -391,6 +396,8 @@ header .slider {
   display: flex;
   flex-direction: column;
   position: relative;
+  border-radius: 21px;
+  background: linear-gradient(89deg, #263A3D 70.78%, rgba(25, 25, 25, 0) 105.05%);
 }
 header .slider .img {
   overflow: hidden;
@@ -450,8 +457,7 @@ header .slider .slider-text .slide-btn .slide-1 {
   transform: scale(1.1);
 }
 header .search-bar {
-  width: 900px;
-  height: 160px;
+  width: 1114px;
   background: var(--black);
   transform: translateY(-50px);
   display: flex;
@@ -460,6 +466,7 @@ header .search-bar {
   align-items: center;
   flex-direction: column;
   border: solid var(--white-gray) 1px;
+  padding: 40px 86px 35px 86px;
 }
 header .search-bar h1 {
   color: var(--cream);

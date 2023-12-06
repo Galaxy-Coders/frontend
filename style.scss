@@ -22,8 +22,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
     // border: 1px solid red;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cream);
+    border-radius: 10px;
 }
 
 :root {
@@ -35,8 +43,11 @@
     --red: #f00;
     --green: lawngreen;
     --cream: #C9AC8C;
+    --light-cream: rgba(201, 172, 140, 0.93);
     --text-gray: rgba(255, 255, 255, 0.30);
     --brown: #3C2710;
+    --light-blue: #549FF9;
+    --black-blue: #152540;
     --author-p: rgba(255, 255, 255, 0.80);
     --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
     --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
@@ -99,7 +110,6 @@ li {
         display: flex;
         align-items: center;
         list-style: none;
-        margin-left: 350px;
 
         li {
             display: flex;
@@ -133,9 +143,11 @@ li {
 
             a {
                 color: var(--light-gray);
-                text-decoration: none;
-                transition: .5s;
-                font-size: 1rem;
+                font-family: HelveticaNeueCyr;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 144.4%;
+                transition: 0.5s;
             }
         }
     }
@@ -144,32 +156,23 @@ li {
         background-size: cover;
         cursor: pointer;
         display: flex;
+        align-items: center;
+        gap: 10px;
         user-select: none;
 
-        button {
-            margin-right: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 2px 3px var(--red);
-            border: none;
-            outline: none;
-            color: var(--red);
-            background: var(--black);
-            cursor: pointer;
-            display: flex;
-
-            a {
-                padding: 5px 15px;
-                color: var(--red);
-            }
+        .sign {
+            border-radius: 15px;
+            background: #C9AC8C;
+            padding: 10px 30px;
+            color: var(--brown);
+            font-family: Steinbeck;
+            font-weight: 400;
         }
 
         .log {
-            box-shadow: 0 0 2px 3px var(--green);
-            color: var(--green);
-
-            a {
-                color: var(--green);
-            }
+            color: var(--light-gray);
+            font-family: Steinbeck;
+            font-weight: 400;
         }
     }
 
@@ -430,6 +433,8 @@ header {
         display: flex;
         flex-direction: column;
         position: relative;
+        border-radius: 21px;
+        background: linear-gradient(89deg, #263A3D 70.78%, rgba(25, 25, 25, 0.00) 105.05%);
 
         .img {
             overflow: hidden;
@@ -471,7 +476,6 @@ header {
                 display: flex;
                 width: 100%;
                 height: 26%;
-                // border: 1px solid red;
                 justify-content: space-between;
 
 
@@ -494,8 +498,7 @@ header {
     }
 
     .search-bar {
-        width: 900px;
-        height: 160px;
+        width: 1114px;
         background: var(--black);
         transform: translateY(-50px);
         display: flex;
@@ -504,12 +507,12 @@ header {
         align-items: center;
         flex-direction: column;
         border: solid var(--white-gray) 1px;
+        padding: 40px 86px 35px 86px;
 
         h1 {
             color: var(--cream);
             margin-bottom: 20px;
             font-family: Rotterburg Stylish FREE;
-            // border: solid red;
         }
 
         .s-bottom {

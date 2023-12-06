@@ -1,6 +1,5 @@
 
 function asarlar_btn() {
-  alert('asarlar')
   const asarlar_div = document.querySelector('.asarlari .bottom');
   asarlar_div.classList.toggle('asarlar-notscroll')
 }
@@ -60,3 +59,8 @@ clearBtn.addEventListener('click', () => {
 
 var log = document.querySelector('.log')
 var sign = document.querySelector('.sign')
+
+function kitob_tavsiya() {
+  const kt_bottom = document.querySelector('.kitob-tavsiya .bottom');
+  kt_bottom.classList.toggle('kt_notscroll');
+}
