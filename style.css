@@ -21,6 +21,10 @@
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --black: #191919;
   --white: #fff;
@@ -28,13 +32,22 @@
   --light-gray: rgba(255, 255, 255, 0.60);
   --white-gray: #404040;
   --red: #f00;
-  --green: lawngreen;
+  --green: #198754;
   --cream: #C9AC8C;
   --text-gray: rgba(255, 255, 255, 0.30);
   --brown: #3C2710;
+  --light-blue: #549FF9;
+  --light-cream: rgba(201, 172, 140, 0.93);
+  --black-blue: #152540;
+  --hover-blue-black: #002c78;
   --author-p: rgba(255, 255, 255, 0.80);
   --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
   --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 body {
@@ -98,7 +111,6 @@ li {
 .nav-fixed .ul-desktop li {
   display: flex;
   align-items: center;
-  padding: 30px 20px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -126,7 +138,10 @@ li {
   color: var(--light-gray);
   text-decoration: none;
   transition: 0.5s;
-  font-size: 1rem;
+  font-size: 16px;
+  padding: 25px 15px;
+  width: 100%;
+  height: 100%;
 }
 .nav-fixed .profile {
   background-size: cover;
@@ -138,24 +153,40 @@ li {
 }
 .nav-fixed .profile button {
   margin-right: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 3px var(--red);
   border: none;
   outline: none;
-  color: var(--red);
-  background: var(--black);
+  color: var(--);
   cursor: pointer;
   display: flex;
+  border-radius: 5px;
+  background: transparent;
 }
 .nav-fixed .profile button a {
-  padding: 5px 15px;
+  transition: 0.5s;
+  width: 100%;
+  border: solid red 2px;
+  height: 100%;
+  padding: 8px 15px;
+  color: var(--black);
+  border-radius: 5px;
+  font-weight: 600;
+  background: red;
+}
+.nav-fixed .profile button a:hover {
+  background: var(--black);
+  box-shadow: 0 0 10px red;
   color: var(--red);
 }
 .nav-fixed .profile .log {
-  box-shadow: 0 0 2px 3px var(--green);
-  color: var(--green);
+  background: #000;
 }
 .nav-fixed .profile .log a {
+  border: solid var(--green) 2px;
+  background: var(--green);
+  border-radius: 5px;
+}
+.nav-fixed .profile .log a:hover {
+  box-shadow: 0 0 10px var(--green);
   color: var(--green);
 }
 .nav-fixed .gamburger-menu {
@@ -498,10 +529,10 @@ header .search-bar .s-bottom .search-inp::placeholder {
   transition: 0.5s;
 }
 header .search-bar .s-bottom .search-inp:focus::-moz-placeholder {
-  color: var(--white);
+  color: transparent;
 }
 header .search-bar .s-bottom .search-inp:focus::placeholder {
-  color: var(--white);
+  color: transparent;
 }
 header .search-bar .s-bottom button {
   padding: 10px 30px 10px 50px;
@@ -541,6 +572,9 @@ header .search-bar .s-bottom button {
   flex-direction: column;
   align-items: center;
 }
+.main-books .bottom .card:hover .card-top img {
+  transform: scale(1.1);
+}
 .main-books .bottom .card .card-top {
   width: 164.152px;
   height: 246.228px;
@@ -548,6 +582,7 @@ header .search-bar .s-bottom button {
 .main-books .bottom .card .card-top img {
   width: 100%;
   height: 100%;
+  transition: 0.3s;
   border-radius: 15px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
@@ -579,6 +614,123 @@ header .search-bar .s-bottom button {
   font-size: 12px;
   font-weight: 300;
   line-height: 144.4%;
+}
+
+.contact-us {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  margin: 50px 0;
+}
+.contact-us .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us .left .img {
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-image: url(imgs/operator.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contact-us .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us .right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 340px;
+}
+.contact-us .right form input {
+  border-radius: 10px;
+  padding: 10px 25px;
+  outline: none;
+  border: solid gray 1px;
+  background: transparent;
+  margin: 10px 0;
+  color: gray;
+  font-family: Steinbeck;
+  transition: 0.5s;
+}
+.contact-us .right form input:focus {
+  color: var(--white);
+  transform: scale(1.05);
+}
+.contact-us .right form input:focus::-moz-placeholder {
+  color: var(--white);
+}
+.contact-us .right form input:focus::placeholder {
+  color: var(--white);
+}
+.contact-us .right form input::-moz-placeholder {
+  font-family: sans-serif;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact-us .right form input::placeholder {
+  font-family: sans-serif;
+  transition: 0.5s;
+}
+.contact-us .right form input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+.contact-us .right form textarea {
+  background: transparent;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 25px;
+  margin: 10px 0;
+  color: gray;
+  resize: none;
+  transition: 0.5s;
+  font-family: Steinbeck;
+}
+.contact-us .right form textarea:focus {
+  color: var(--white);
+  transform: scale(1.05);
+}
+.contact-us .right form textarea:focus::-moz-placeholder {
+  color: var(--white);
+}
+.contact-us .right form textarea:focus::placeholder {
+  color: var(--white);
+}
+.contact-us .right form textarea::-moz-placeholder {
+  font-family: sans-serif;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact-us .right form textarea::placeholder {
+  font-family: sans-serif;
+  transition: 0.5s;
+}
+.contact-us .right form button {
+  padding: 10px 25px;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  background: var(--black-blue);
+  color: gray;
+  margin: 10px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.contact-us .right form button:hover {
+  box-shadow: 0 0 10px var(--hover-blue-black);
+  color: var(--white);
+  transform: scale(1.1);
+  background: var(--hover-blue-black);
 }
 
 footer {
@@ -616,6 +768,10 @@ footer .right {
 footer .right .logo-con {
   display: flex;
   align-items: center;
+  transition: 0.5s;
+}
+footer .right .logo-con:hover {
+  transform: scale(1.1);
 }
 footer .right .logo-con img {
   padding: 0 5px;
@@ -644,8 +800,6 @@ footer .right .logo-con img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  left: 711px;
 }
 .signup .center .text {
   width: 330px;
@@ -785,14 +939,20 @@ footer .right .logo-con img {
 .signin .right form button {
   width: 100%;
   font-size: 20px;
-  padding: 15px 25px;
-  border-radius: 100px;
-  background: var(--black-blue);
   color: var(--white);
+  border: none;
   outline: none;
-  border: solid #000 1px;
   margin: 10px 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin .right form button a {
+  background: var(--black-blue);
+  border-radius: 100px;
+  width: 100%;
+  padding: 15px 25px;
 }
 
 @keyframes signup {

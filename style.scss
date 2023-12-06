@@ -26,6 +26,10 @@
     // border: 1px solid red;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root {
     --black: #191919;
     --white: #fff;
@@ -33,13 +37,22 @@
     --light-gray: rgba(255, 255, 255, 0.60);
     --white-gray: #404040;
     --red: #f00;
-    --green: lawngreen;
+    --green: #198754;
     --cream: #C9AC8C;
     --text-gray: rgba(255, 255, 255, 0.30);
     --brown: #3C2710;
+    --light-blue: #549FF9;
+    --light-cream: rgba(201, 172, 140, 0.93);
+    --black-blue: #152540;
+    --hover-blue-black: #002c78;
     --author-p: rgba(255, 255, 255, 0.80);
     --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
     --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
 }
 
 
@@ -104,7 +117,6 @@ li {
         li {
             display: flex;
             align-items: center;
-            padding: 30px 20px;
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -135,7 +147,10 @@ li {
                 color: var(--light-gray);
                 text-decoration: none;
                 transition: .5s;
-                font-size: 1rem;
+                font-size: 16px;
+                padding: 25px 15px;
+                width: 100%;
+                height: 100%;
             }
         }
     }
@@ -148,27 +163,42 @@ li {
 
         button {
             margin-right: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 2px 3px var(--red);
             border: none;
             outline: none;
-            color: var(--red);
-            background: var(--black);
+            color: var(--);
             cursor: pointer;
             display: flex;
-
+            border-radius: 5px;
+            background: transparent;
+            // overflow: hidden;
             a {
-                padding: 5px 15px;
-                color: var(--red);
+                transition: .5s;
+                width: 100%;
+                border: solid red 2px;
+                height: 100%;
+                padding: 8px 15px;
+                color: var(--black);
+                border-radius: 5px;
+                font-weight: 600;
+                background: red;
+                &:hover{
+                    background: var(--black);
+                    box-shadow: 0 0 10px red;
+                    color: var(--red);
+                }
             }
         }
 
         .log {
-            box-shadow: 0 0 2px 3px var(--green);
-            color: var(--green);
-
+            background: #000;
             a {
-                color: var(--green);
+                border: solid var(--green) 2px;
+                background: var(--green);
+                border-radius: 5px;
+                &:hover{
+                    box-shadow: 0 0 10px var(--green);
+                    color: var(--green);
+                }
             }
         }
     }
@@ -509,7 +539,6 @@ header {
             color: var(--cream);
             margin-bottom: 20px;
             font-family: Rotterburg Stylish FREE;
-            // border: solid red;
         }
 
         .s-bottom {
@@ -543,7 +572,7 @@ header {
                 }
 
                 &:focus::placeholder {
-                    color: var(--white);
+                    color: transparent;
                 }
             }
 
@@ -591,6 +620,10 @@ header {
             flex-direction: column;
             align-items: center;
 
+            &:hover .card-top img{
+                transform: scale(1.1);
+            }
+
             .card-top {
                 width: 164.152px;
                 height: 246.228px;
@@ -598,6 +631,7 @@ header {
                 img {
                     width: 100%;
                     height: 100%;
+                    transition: .3s;
                     border-radius: 15px;
                     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
                 }
@@ -641,7 +675,115 @@ header {
     }
 }
 
-////////////////********* footer style *********\\\\\\\\\\\\
+////////////////********* footer style *********\\\\\\\\\\\\\\\\\
+
+.contact-us{
+    width: 100%;
+    height: 560px;
+    display: flex;
+    margin: 50px 0;
+    .left{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img{
+            width: 450px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 50%;
+
+            background-image: url(imgs/operator.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .right{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 340px;
+            // border: solid red;
+            // height: 40%;
+            input{
+                border-radius: 10px;
+                padding: 10px 25px;
+                outline: none;
+                border: solid gray 1px;
+                background: transparent;
+                margin: 10px 0;
+                color: gray;
+                font-family: Steinbeck;
+                transition: .5s;
+
+                &:focus{
+                    color: var(--white);
+                    transform: scale(1.05);
+                }
+                &:focus::placeholder{
+                    color: var(--white);
+                }
+                &::placeholder{
+                    font-family: sans-serif;
+                    transition: .5s;
+                }
+            }
+            input[type="number"]::-webkit-inner-spin-button {
+                display: none;
+            }
+
+            textarea{
+                background: transparent;
+                border-radius: 10px;
+                outline: none;
+                padding: 10px 25px;
+                margin: 10px 0;
+                color: gray;
+                resize: none;
+                transition: .5s;
+                font-family: Steinbeck;
+                &:focus{
+                    color: var(--white);
+                    transform: scale(1.05);
+                }
+                &:focus::placeholder{
+                    color: var(--white);
+                }
+                &::placeholder{
+                    font-family: sans-serif;
+                    transition: .5s;
+                }
+            }
+
+            button{
+                padding: 10px 25px;
+                outline: none;
+                border: none;
+                border-radius: 40px;
+                background: var(--black-blue);
+                color: gray;
+                margin: 10px 0;
+                transition: 0.5s;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0 0 10px var(--hover-blue-black);
+                    color: var(--white);
+                    transform: scale(1.1);
+                    background: var(--hover-blue-black);
+                }
+            }
+        }
+    }
+}
 
 footer {
     width: 100%;
@@ -679,6 +821,11 @@ footer {
         .logo-con {
             display: flex;
             align-items: center;
+            transition: .5s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
 
             img {
                 padding: 0 5px;
@@ -713,8 +860,6 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        position: absolute;
-        left: 711px;
 
         .text {
             width: 330px;
@@ -785,6 +930,7 @@ footer {
                     height: 100%;
                     padding: 15px 25px;
                     background: var(--black-blue);
+                    // color: ;
                 }
             }
         }
@@ -869,14 +1015,21 @@ footer {
             button {
                 width: 100%;
                 font-size: 20px;
-                padding: 15px 25px;
-                border-radius: 100px;
-                background: var(--black-blue);
                 color: var(--white);
+                border: none;
                 outline: none;
-                border: solid #000 1px;
                 margin: 10px 0;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    background: var(--black-blue);
+                    border-radius: 100px;
+                    width: 100%;
+                    padding: 15px 25px;
+                }
             }
         }
     }
