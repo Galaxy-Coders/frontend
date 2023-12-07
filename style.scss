@@ -63,9 +63,9 @@ body {
     width: 100%;
     height: fit-content;
     background: var(--black);
-    background-image: url(imgs/ornament.png);
+    background-image: url(../imgs/ornament.png), url(../imgs/ornament2.png);
     background-repeat: no-repeat;
-    background-position: right 260px;
+    background-position: right 260px, left 1080px;
 }
 
 a {

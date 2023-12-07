@@ -11,6 +11,21 @@
 
 <body>
 
+  <div class="comment">
+    <div class="container">
+      <div class="top">
+        <h2>Izoh qoldiring</h2>
+        <img src="../imgs/close-button-svgrepo-com.svg" alt="" width="20" height="20" onclick="comment('close-nocomment')">
+      </div>
+      <div class="bottom">
+        <form action="">
+          <textarea name="" id="" placeholder="Izoh" required></textarea>
+          <input type="submit" value="Jo'natish" onclick="comment('close')">
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- book page coding -->
 
   <div class="book">
@@ -99,10 +114,10 @@
     <div class="top">
       <ul>
         <li><a href="./author.html">Muallif haqida</a></li>
-        <li onclick="iqtibos_clicked()" class="iqtibos_li">Kitobdan iqtiboslar</li>
-        <li onclick="taqriz_clicked()" class="taqriz_li">Kitobxonlar taqrizi</li>
+        <li onclick="showContent('iqtibos')">Kitobdan iqtiboslar</li>
+        <li onclick="showContent('taqriz')">Kitobxonlar taqrizi</li>
       </ul>
-      <button><img src="../imgs/comment.svg" alt=""></button>
+      <button onclick="comment('open')"><img src="../imgs/comment.svg" alt=""></button>
     </div>
     <div class="bottom">
       <div class="iqtibos">
@@ -140,7 +155,7 @@
         <div class="card one">
           <div class="card-left">
             <div class="book-top">
-              <img src="../imgs/qoshtirnoq.png" alt="">
+              <h2>Azizbek G'ulomov</h2>
             </div>
             <div class="book-bottom">
               <p>Inson bolasi ne kunlarni ko‘rmaydi?!
@@ -151,12 +166,11 @@
               </p>
             </div>
           </div>
-          <div class="card-right"></div>
         </div>
         <div class="card two">
           <div class="card-left">
             <div class="book-top">
-              <img src="../imgs/qoshtirnoq.png" alt="">
+              <h2>Ahadov Asadbek</h2>
             </div>
             <div class="book-bottom">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellendus provident enim
@@ -165,7 +179,6 @@
               </p>
             </div>
           </div>
-          <div class="card-right"></div>
         </div>
       </div>
     </div>
@@ -286,7 +299,7 @@
 
   <!-- book page coding coding end -->
 
-  <script src="../script.js"></script>
+  <script src="../Javascript/book.js"></script>
 
 </body>
 

@@ -4,6 +4,8 @@ function asarlar_btn() {
   asarlar_div.classList.toggle('asarlar-notscroll')
 }
 
+
+var gmMenu = document.querySelector('.gamburger-menu')
 var aAll = document.querySelectorAll('.slide-a');
 var firstImg = document.querySelector('.first-img');
 var count = 0;
@@ -34,8 +36,6 @@ aAll.forEach((a, index) => {
 });
 
 set = setInterval(nextSlide, 5000);
-
-var gmMenu = document.querySelector('.gamburger-menu')
 var headFix = document.querySelector('.header-fixer')
 var headBg = document.querySelector('.head-bg')
 var clearBtn = document.querySelector('.clear-btn')
@@ -59,15 +59,3 @@ clearBtn.addEventListener('click', () => {
 
 var log = document.querySelector('.log')
 var sign = document.querySelector('.sign')
-
-function kitob_tavsiya() {
-  const kt_bottom = document.querySelector('.kitob-tavsiya .bottom');
-  kt_bottom.classList.toggle('kt_notscroll');
-}
-
-const iqtibos = document.querySelector('.iqtibos');
-const taqriz = document.querySelector('.taqriz');
-const iqtibos_li = document.querySelector('.iqtibos-li')
-const taqriz_li = document.querySelector('.taqriz-li')
-
-iqtibos_li.style.color = 'var(--cream)';
