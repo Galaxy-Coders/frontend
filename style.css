@@ -18,6 +18,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -391,70 +392,57 @@ header {
   align-items: center;
 }
 header .slider {
+  display: flex;
   width: 80%;
   height: 340px;
-  display: flex;
-  flex-direction: column;
   position: relative;
+  overflow: hidden;
   border-radius: 21px;
   background: linear-gradient(89deg, #263A3D 70.78%, rgba(25, 25, 25, 0) 105.05%);
 }
-header .slider .img {
-  overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-header .slider .img .slide-img {
-  display: flex;
-}
-header .slider .img .slide-img img {
+header .slider .slides {
   width: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: 0.5s;
-}
-header .slider .slider-text {
-  width: 340px;
   height: 100%;
-  position: absolute;
-  left: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: 0.5s;
 }
-header .slider .slider-text h1 {
-  height: 70%;
+header .slider .slides a {
+  padding-top: 30px;
+  padding-left: 75px;
   width: 100%;
-  font-size: 3rem;
-  font-weight: 100;
-  font-family: Rotterburg Stylish FREE;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  height: 100%;
+  background-size: cover;
+  background-image: url(./imgs/Group\ 2.png);
+}
+header .slider .slides a h1 {
+  width: 337px;
   color: var(--cream);
+  font-family: Rotterburg Stylish FREE;
+  font-size: 61px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-header .slider .slider-text .slide-btn {
+header .slider .slider-control {
+  position: absolute;
   display: flex;
-  width: 100%;
-  height: 26%;
-  justify-content: space-between;
+  gap: 20px;
+  left: 75px;
+  bottom: 75px;
 }
-header .slider .slider-text .slide-btn div {
-  width: 75px;
-  height: 4px;
-  background: var(--text-gray);
-  border-radius: 5px;
+header .slider .slider-control div {
+  width: 57.391px;
+  height: 3px;
+  border-radius: 10px;
+  background: var(--light-gray);
   transition: 0.5s;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
-header .slider .slider-text .slide-btn .slide-1 {
-  background: var(--white);
-  transform: scale(1.1);
+header .slider .slider-control div:hover {
+  scale: 1.1;
+  background-color: var(--white);
 }
 header .search-bar {
   width: 1114px;
@@ -590,41 +578,37 @@ header .search-bar .s-bottom button {
 
 .contact-us {
   width: 100%;
-  height: 560px;
+  margin-top: 80px;
+  padding: 30px;
+}
+.contact-us .top {
+  text-align: center;
+}
+.contact-us .top h1 {
+  color: var(--cream);
+  font-family: Rotterburg Stylish FREE;
+  font-size: 31px;
+  font-weight: 400;
+}
+.contact-us .bottom {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 50px;
   display: flex;
-  margin: 50px 0;
+  justify-content: space-evenly;
 }
-.contact-us .left {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact-us .left .img {
-  width: 450px;
-  height: 450px;
-  overflow: hidden;
-  border-radius: 50%;
-  background-image: url(imgs/operator.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.contact-us .right {
-  width: 50%;
-  height: 100%;
+.contact-us .bottom .right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact-us .right form {
+.contact-us .bottom .right form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 340px;
 }
-.contact-us .right form input {
+.contact-us .bottom .right form input {
   border-radius: 10px;
   padding: 10px 25px;
   outline: none;
@@ -635,29 +619,29 @@ header .search-bar .s-bottom button {
   font-family: Steinbeck;
   transition: 0.5s;
 }
-.contact-us .right form input:focus {
+.contact-us .bottom .right form input:focus {
   color: var(--white);
   transform: scale(1.05);
 }
-.contact-us .right form input:focus::-moz-placeholder {
+.contact-us .bottom .right form input:focus::-moz-placeholder {
   color: var(--white);
 }
-.contact-us .right form input:focus::placeholder {
+.contact-us .bottom .right form input:focus::placeholder {
   color: var(--white);
 }
-.contact-us .right form input::-moz-placeholder {
+.contact-us .bottom .right form input::-moz-placeholder {
   font-family: Steinbeck;
   -moz-transition: 0.5s;
   transition: 0.5s;
 }
-.contact-us .right form input::placeholder {
+.contact-us .bottom .right form input::placeholder {
   font-family: Steinbeck;
   transition: 0.5s;
 }
-.contact-us .right form input[type=number]::-webkit-inner-spin-button {
+.contact-us .bottom .right form input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
-.contact-us .right form textarea {
+.contact-us .bottom .right form textarea {
   background: transparent;
   border-radius: 10px;
   outline: none;
@@ -668,26 +652,26 @@ header .search-bar .s-bottom button {
   transition: 0.5s;
   font-family: Steinbeck;
 }
-.contact-us .right form textarea:focus {
+.contact-us .bottom .right form textarea:focus {
   color: var(--white);
   transform: scale(1.05);
 }
-.contact-us .right form textarea:focus::-moz-placeholder {
+.contact-us .bottom .right form textarea:focus::-moz-placeholder {
   color: var(--white);
 }
-.contact-us .right form textarea:focus::placeholder {
+.contact-us .bottom .right form textarea:focus::placeholder {
   color: var(--white);
 }
-.contact-us .right form textarea::-moz-placeholder {
+.contact-us .bottom .right form textarea::-moz-placeholder {
   font-family: Steinbeck;
   -moz-transition: 0.5s;
   transition: 0.5s;
 }
-.contact-us .right form textarea::placeholder {
+.contact-us .bottom .right form textarea::placeholder {
   font-family: Steinbeck;
   transition: 0.5s;
 }
-.contact-us .right form button {
+.contact-us .bottom .right form button {
   padding: 10px 25px;
   outline: none;
   border: none;
@@ -701,12 +685,6 @@ header .search-bar .s-bottom button {
   font-family: Steinbeck;
   font-size: 16px;
   font-weight: 400;
-}
-.contact-us .right form button:hover {
-  box-shadow: 0 0 10px var(--hover-blue-black);
-  color: var(--white);
-  transform: scale(1.1);
-  background: var(--hover-blue-black);
 }
 
 footer {
