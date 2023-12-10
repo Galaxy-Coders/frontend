@@ -31,27 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
 
   function showSlide(index) {
-      slides.style.transform = `translateX(-${index * 100}%)`;
+    slides.style.transform = `translateX(-${index * 100}%)`;
   }
 
   function setActiveControl(index) {
-      controls.forEach((control, i) => {
-          control.style.background = i === index ? 'var(--white)' : 'var(--light-gray)';
-      });
+    controls.forEach((control, i) => {
+      control.style.background = i === index ? 'var(--white)' : 'var(--light-gray)';
+    });
   }
 
   function nextSlide() {
-      currentIndex = (currentIndex + 1) % controls.length;
-      showSlide(currentIndex);
-      setActiveControl(currentIndex);
+    currentIndex = (currentIndex + 1) % controls.length;
+    showSlide(currentIndex);
+    setActiveControl(currentIndex);
   }
 
   controls.forEach((control, index) => {
-      control.addEventListener('click', () => {
-          currentIndex = index;
-          showSlide(currentIndex);
-          setActiveControl(currentIndex);
-      });
+    control.addEventListener('click', () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+      setActiveControl(currentIndex);
+    });
   });
 
   setInterval(nextSlide, 4000);
@@ -60,3 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 var log = document.querySelector('.log')
 var sign = document.querySelector('.sign')
+
+const subCategory = document.querySelector('.sub-category');
+
+function subCategoryIn() {
+  subCategory.style.opacity = '1';
+  subCategory.style.pointerEvents = 'auto';
+}
+
+function subCategoryOut() {
+  subCategory.style.opacity = '0';
+  subCategory.style.pointerEvents = 'none';
+}
