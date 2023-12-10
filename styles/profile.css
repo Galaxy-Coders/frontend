@@ -8,7 +8,7 @@
   padding: 38.5px 0 43px 76.5px;
   border-radius: 15px;
   display: flex;
-  background: url(../imgs/profileicon.png) no-repeat right, linear-gradient(-90deg, rgb(47, 47, 47) 6%, rgb(25, 25, 25) 100%);
+  background: url(.../imgs/profileicon.png) no-repeat right, linear-gradient(-90deg, rgb(47, 47, 47) 6%, rgb(25, 25, 25) 100%);
 }
 .profile-info .container .left {
   text-align: center;

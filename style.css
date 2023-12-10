@@ -50,11 +50,6 @@
 }
 
 body {
-  color: var(--black);
-  background-color: var(--black);
-}
-
-body {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -156,6 +151,7 @@ li {
   left: 36%;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 .nav-fixed .ul-desktop .sub-category a {
@@ -442,7 +438,7 @@ header .slider .slides a {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url(./imgs/Group\ 2.png);
+  background-image: url(../imgs/Group\ 2.png);
 }
 header .slider .slides a h1 {
   width: 337px;
@@ -506,7 +502,7 @@ header .search-bar .s-bottom .search-inp::-webkit-search-cancel-button {
           appearance: none;
   height: 20px;
   width: 20px;
-  background-image: url(./imgs/close-button-svgrepo-com.svg);
+  background-image: url(../imgs/close-button-svgrepo-com.svg);
   background-size: 20px 20px;
   fill: var(--cream);
 }
@@ -542,46 +538,57 @@ header .search-bar .s-bottom button {
   color: var(--brown);
 }
 
-.main-books {
+.main-books,
+.books {
   margin-top: 30px;
   padding: 0 120px;
 }
-.main-books .top h1 {
+.main-books .top h1,
+.books .top h1 {
   font-family: Rotterburg Stylish FREE;
   color: var(--cream);
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.main-books .bottom {
+.main-books .bottom,
+.books .bottom {
   margin-top: 50px;
   display: flex;
   gap: 35px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.main-books .bottom .card {
+.main-books .bottom .card,
+.books .bottom .card {
   width: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-books .bottom .card .card-top {
+.main-books .bottom .card .card-top,
+.books .bottom .card .card-top {
   width: 164.152px;
   height: 246.228px;
 }
-.main-books .bottom .card .card-top img {
+.main-books .bottom .card .card-top img,
+.books .bottom .card .card-top img {
   width: 100%;
   height: 100%;
   border-radius: 15px;
   background: url(<path-to-image>), lightgray 50%/cover no-repeat;
 }
-.main-books .bottom .card .card-bottom h2 {
+.main-books .bottom .card .card-bottom h2,
+.books .bottom .card .card-bottom h2 {
   color: var(--cream);
   font-family: Rotterburg Stylish FREE;
   font-size: 20px;
   font-weight: 400;
   margin-top: 17px;
 }
-.main-books .bottom .card .card-bottom span {
+.main-books .bottom .card .card-bottom span,
+.books .bottom .card .card-bottom span {
   font-family: Visuelt Pro;
   font-size: 12px;
   color: var(--light-gray);
@@ -589,19 +596,57 @@ header .search-bar .s-bottom button {
   line-height: 144.4%;
   margin-top: 1.3px;
 }
-.main-books .bottom .card .card-bottom div {
+.main-books .bottom .card .card-bottom div,
+.books .bottom .card .card-bottom div {
   display: inline-flex;
   justify-content: center;
   align-items: flex-start;
   gap: 7px;
   margin-top: 3.8px;
 }
-.main-books .bottom .card .card-bottom div h3 {
+.main-books .bottom .card .card-bottom div h3,
+.books .bottom .card .card-bottom div h3 {
   color: var(--light-gray);
   font-family: Visuelt Pro;
   font-size: 12px;
   font-weight: 300;
   line-height: 144.4%;
+}
+
+.compony-info {
+  padding-inline: 80px;
+  margin-top: 50px;
+}
+.compony-info .container {
+  box-shadow: 0px 4px 73px 0px rgba(0, 0, 0, 0.25);
+  padding: 38.5px 0 43px 76.5px;
+  border-radius: 15px;
+  display: flex;
+  gap: 75px;
+  background: url(./imgs/profileicon.png) no-repeat right, linear-gradient(-90deg, rgb(47, 47, 47) 6%, rgb(25, 25, 25) 100%);
+}
+.compony-info .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.compony-info .container div img {
+  width: 50px;
+  height: 50px;
+}
+.compony-info .container div p {
+  color: var(--light-gray);
+  font-family: Steinbeck;
+  font-size: 24px;
+  font-weight: 400;
+}
+.compony-info .container div h1 {
+  color: var(--cream);
+  font-family: Rotterburg Stylish FREE;
+  font-size: 48px;
+  font-weight: 400;
 }
 
 .contact-us {

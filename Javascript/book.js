@@ -37,3 +37,17 @@ function comment(contentType) {
     comment.style.display = 'none';
   }
 }
+
+const author_li = document.querySelectorAll('.author_li button');
+const books_li = document.querySelectorAll('.book_li button');
+books_li[0].style.color = 'var(--cream)';
+author_li[0].style.color = 'var(--cream)';
+
+function li_clicked(index) {
+  books_li.forEach((button, i) => {
+    button.style.color = i === index ? 'var(--cream)' : 'var(--light-gray)';
+  });
+  author_li.forEach((button, i) => {
+    button.style.color = i === index ? 'var(--cream)' : 'var(--light-gray)';
+  })
+}

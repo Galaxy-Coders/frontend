@@ -221,7 +221,7 @@
 }
 .kitob-haqida .bottom .iqtibos .card {
   position: relative;
-  background: url(../imgs/book\ card\ ornament.png) no-repeat bottom -50px right, var(--book-iqtibos-card-gradient);
+  background: url(.../imgs/book\ card\ ornament.png) no-repeat bottom -50px right, var(--book-iqtibos-card-gradient);
   display: flex;
   border-radius: 15px;
   min-width: 800px;
@@ -256,7 +256,7 @@
   display: none;
 }
 .kitob-haqida .bottom .taqriz .card {
-  background: url(../imgs/book\ card\ ornament.png) no-repeat bottom -50px right, var(--book-iqtibos-card-gradient);
+  background: url(.../imgs/book\ card\ ornament.png) no-repeat bottom -50px right, var(--book-iqtibos-card-gradient);
   display: flex;
   border-radius: 15px;
   width: 48%;
