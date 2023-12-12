@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelf book</title>
+  <link rel="shortcut icon" href="../imgs/kitob.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/shelf-book.css">
+</head>
+
+<body>
+
+  <div class="shelf-book">
+    <div class="container">
+      <div class="left">
+        <div class="img" style="background-image: url(../imgs/ajdodlarimiz\ fojiasi.png);"></div>
+      </div>
+      <div class="right">
+        <h1>Audio fayl</h1>
+        <div class="audio-player">
+          <audio id="audio" controls>
+            <source src="../2. Benjamin Ingrosso & Alan Walker - Man On The Moon.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <div class="top-audio">
+            <div id="current-time">
+              <p>0:00</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div id="total-time">
+              <p>0:00</p>
+            </div>
+          </div>
+          <div class="controls">
+            <img src="../imgs/forward-svgrepo-com.svg" alt="" onclick="skip('forward')">
+            <img src="../imgs/play-svgrepo-com.svg" alt="" id="play-pause-button" onclick="togglePlay()">
+            <img src="../imgs/forward-svgrepo-com.svg" alt="" onclick="skip('backward')">
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <div class="pdf-reader">
+    <iframe src="../python.pdf" frameborder="0" width="100%" height="100vh" controls></iframe>
+  </div>
+
+  <script>
+    const audio = document.getElementById("audio");
+    const playPauseButton = document.getElementById("play-pause-button");
+    const progressBar = document.getElementById("progress-bar");
+    const currentTimeDisplay = document.getElementById("current-time");
+    const totalTimeDisplay = document.getElementById("total-time");
+    const pdfReader = document.querySelector('.uniframe');
+
+    let isPlaying = false;
+
+    function togglePlay() {
+      if (isPlaying) {
+        audio.pause();
+        playPauseButton.src = "../imgs/play-svgrepo-com.svg";
+      } else {
+        audio.play();
+        playPauseButton.src = "../imgs/pause-svgrepo-com.svg";
+      }
+      isPlaying = !isPlaying;
+    }
+
+    function skip(direction) {
+      const skipAmount = 5;
+      if (direction === 'backward') {
+        audio.currentTime += skipAmount;
+      } else if (direction === 'forward') {
+        audio.currentTime -= skipAmount;
+      }
+    }
+
+    audio.addEventListener("timeupdate", () => {
+      const currentTime = audio.currentTime;
+      const duration = audio.duration;
+
+      const currentMinutes = Math.floor(currentTime / 60);
+      const currentSeconds = Math.floor(currentTime % 60);
+      const totalMinutes = Math.floor(duration / 60);
+      const totalSeconds = Math.floor(duration % 60);
+
+      currentTimeDisplay.innerHTML = `<p>${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}</p>`;
+      totalTimeDisplay.innerHTML = `<p>${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}</p>`;
+
+      const progress = (currentTime / duration) * 100;
+      progressBar.style.width = `${progress}%`;
+    });
+  </script>
+</body>
+
+</html>

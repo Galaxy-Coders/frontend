@@ -649,6 +649,95 @@ header .search-bar .s-bottom button {
   font-weight: 400;
 }
 
+.yozuvchilar {
+  padding-inline: 80px;
+  margin-top: 80px;
+}
+.yozuvchilar .container .top h1 {
+  font-family: Rotterburg Stylish FREE;
+  color: var(--cream);
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.yozuvchilar .container .bottom {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.yozuvchilar .container .bottom .card {
+  width: 173.33px;
+  border-radius: 15px;
+  background: var(--author-card-gradient);
+  box-shadow: 0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02), 0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03), 0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+}
+.yozuvchilar .container .bottom .card:hover .card-bottom .author-info h2 {
+  color: var(--cream);
+}
+.yozuvchilar .container .bottom .card .card-bottom {
+  height: 45%;
+  text-align: center;
+  background-image: url(".../imgs/author naqsh1.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-position-y: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  gap: 12px;
+}
+.yozuvchilar .container .bottom .card .card-bottom .author-info {
+  flex: 1;
+}
+.yozuvchilar .container .bottom .card .card-bottom .author-info h2 {
+  color: var(--text-gray);
+  font-family: Steinbeck;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.5s;
+}
+.yozuvchilar .container .bottom .card .card-bottom .author-info p {
+  color: var(--light-gray);
+  font-family: Steinbeck;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 4.15px;
+}
+.yozuvchilar .container .bottom .card .card-bottom .card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+.yozuvchilar .container .bottom .card .card-bottom .card-info div {
+  display: flex;
+  align-items: center;
+}
+.yozuvchilar .container .bottom .card .card-bottom .card-info div p {
+  margin: 0;
+  color: var(--white);
+  font-family: Steinbeck;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+.yozuvchilar .container .bottom .card-top {
+  width: 173.983px;
+  height: 55%;
+}
+.yozuvchilar .container .bottom .card-top img {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-us {
   width: 100%;
   margin-top: 80px;
