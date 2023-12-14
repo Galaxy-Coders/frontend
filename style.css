@@ -47,6 +47,8 @@
   --author-p: rgba(255, 255, 255, 0.80);
   --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
   --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
+  --add-left-bg:rgba(243, 243, 243, 0.93);
+  --dark-black:#000;
 }
 
 body {
@@ -891,6 +893,7 @@ footer .right .logo-con img {
 
 .signup {
   width: 100%;
+  overflow: hidden;
   height: 100vh;
   background: var(--white);
   z-index: 10;
@@ -977,6 +980,7 @@ footer .right .logo-con img {
   width: 100%;
   border-radius: 100px;
   height: 100%;
+  color: var(--white);
   padding: 15px 25px;
   background: var(--black-blue);
 }
