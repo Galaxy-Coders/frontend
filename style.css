@@ -919,7 +919,6 @@ footer .right .logo-con img {
   background: var(--white);
   z-index: 10;
   display: flex;
-  position: relative;
 }
 .signup .left {
   width: 45%;
@@ -929,39 +928,37 @@ footer .right .logo-con img {
   background-repeat: no-repeat;
   background-position: 100px center;
 }
-.signup .center {
+.signup .right {
   width: 55%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  left: 711px;
 }
-.signup .center .text {
+.signup .right .text {
   width: 330px;
 }
-.signup .center .text h1 {
+.signup .right .text h1 {
   font-size: 36px;
   font-family: Arial Black;
   font-weight: 900;
 }
-.signup .center .text p {
+.signup .right .text p {
   font-family: sans-serif;
   font-size: 13px;
   display: inline-block;
 }
-.signup .center .text a {
+.signup .right .text a {
   color: var(--light-blue);
 }
-.signup .center form {
+.signup .right form {
   width: 330px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.signup .center form input {
+.signup .right form input {
   width: 100%;
   font-size: 20px;
   padding: 15px 25px;
@@ -972,21 +969,21 @@ footer .right .logo-con img {
   transition: 0.5s;
   color: gray;
 }
-.signup .center form input:focus {
+.signup .right form input:focus {
   border: solid #000 1px;
   transform: scale(1.1);
   color: #000;
 }
-.signup .center form input:focus::-moz-placeholder {
+.signup .right form input:focus::-moz-placeholder {
   color: #000;
 }
-.signup .center form input:focus::placeholder {
+.signup .right form input:focus::placeholder {
   color: #000;
 }
-.signup .center form input[type=number]::-webkit-inner-spin-button {
+.signup .right form input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
-.signup .center form button {
+.signup .right form button {
   width: 100%;
   font-size: 20px;
   outline: none;
@@ -997,7 +994,7 @@ footer .right .logo-con img {
   height: fit-content;
   display: flex;
 }
-.signup .center form button a {
+.signup .right form button a {
   width: 100%;
   border-radius: 100px;
   height: 100%;
@@ -1081,11 +1078,13 @@ footer .right .logo-con img {
   padding: 15px 25px;
   border-radius: 100px;
   background: var(--black-blue);
-  color: var(--white);
   outline: none;
   border: solid #000 1px;
   margin: 10px 0;
   cursor: pointer;
+}
+.signin .right form button a {
+  color: var(--white) !important;
 }
 
 @keyframes signup {

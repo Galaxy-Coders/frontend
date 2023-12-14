@@ -211,4 +211,51 @@
   .authors .bottom .card {
     width: 155px;
   }
+}
+@media screen and (max-width: 376px) {
+  .signin, .signup {
+    display: block;
+  }
+  .signin .left, .signup .left {
+    display: none;
+  }
+  .signin .right, .signup .right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .book {
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+  }
+  .book .left {
+    padding: 0;
+  }
+  .book .left .img img {
+    width: 275px;
+  }
+  .book .right {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .book .right .full-info .top .hr {
+    width: 208px;
+  }
+  .book .right .formats .top {
+    text-align: center;
+  }
+  .book .right .formats .bottom {
+    flex-direction: column;
+  }
+  .book .right .formats .bottom .two {
+    margin-top: 20px;
+  }
+  .kitob-haqida {
+    padding-left: 20px;
+  }
 }/*# sourceMappingURL=resposive.css.map */
