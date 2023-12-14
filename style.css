@@ -47,8 +47,8 @@
   --author-p: rgba(255, 255, 255, 0.80);
   --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
   --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
-  --add-left-bg:rgba(243, 243, 243, 0.93);
-  --dark-black:#000;
+  --add-left-bg: rgba(243, 243, 243, 0.93);
+  --dark-black: #000;
 }
 
 body {
@@ -82,7 +82,7 @@ li {
   left: 0;
   position: fixed;
   background: var(--black);
-  padding: 0 120px;
+  padding: 0 80px;
   border-bottom: solid var(--light-gray) 2px;
 }
 .nav-fixed .nav-logo {
@@ -245,7 +245,8 @@ li {
   width: 100%;
   height: 90px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-inline: 20px;
   align-items: center;
   border-bottom: solid var(--gray) 2px;
 }
@@ -253,75 +254,56 @@ li {
   background-size: cover;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  gap: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  position: absolute;
-  left: 70px;
 }
-.header-fixer .top .profile button {
-  padding: 5px 15px;
-  margin-right: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 3px var(--red);
-  border: none;
-  height: -moz-fit-content;
-  height: fit-content;
-  outline: none;
-  color: var(--red);
-  background: var(--black);
-  cursor: pointer;
-}
-.header-fixer .top .profile button a {
-  color: var(--red);
+.header-fixer .top .profile .sign {
+  border-radius: 15px;
+  background: #C9AC8C;
+  padding: 10px 30px;
+  color: var(--brown);
+  font-family: Steinbeck;
+  font-weight: 400;
 }
 .header-fixer .top .profile .log {
-  box-shadow: 0 0 2px 3px var(--green);
-  color: var(--green);
-}
-.header-fixer .top .profile .log a {
-  color: var(--green);
+  color: var(--light-gray);
+  font-family: Steinbeck;
+  font-weight: 400;
 }
 .header-fixer .top .clear-btn {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.header-fixer .top .clear-btn::before {
-  content: "";
-  width: 100%;
-  height: 5px;
-  background: var(--white);
-  position: absolute;
-  transform: rotate(-45deg);
-  border-radius: 10px;
-}
-.header-fixer .top .clear-btn::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  background: var(--white);
-  border-radius: 10px;
-  transform: rotate(45deg);
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./imgs/close_thick.svg);
 }
 .header-fixer .center {
   display: flex;
-  align-items: center;
 }
 .header-fixer .center .ul-tablet {
   display: flex;
   flex-direction: column;
   list-style: none;
-  justify-content: center;
-  align-items: center;
+  padding-left: 20px;
   width: 100%;
-  margin: 100px 0;
+  margin-top: 80px;
+}
+.header-fixer .center .ul-tablet details {
+  font-size: 1.5rem;
+  color: var(--text-gray);
+}
+.header-fixer .center .ul-tablet details a {
+  margin-left: 20px;
+  display: block;
+  color: var(--light-gray);
+  font-family: HelveticaNeueCyr;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 144.4%;
+  transition: 0.5s;
 }
 .header-fixer .center .ul-tablet li {
   display: flex;
@@ -353,8 +335,7 @@ li {
   color: var(--white);
 }
 .header-fixer .center .ul-tablet li a {
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.5rem;
   color: var(--text-gray);
 }
 
@@ -487,6 +468,10 @@ header .search-bar h1 {
   margin-bottom: 20px;
   font-family: Rotterburg Stylish FREE;
 }
+header .search-bar .s-bottom {
+  display: flex;
+  gap: 20px;
+}
 header .search-bar .s-bottom .search-inp {
   width: 670px;
   background: var(--white-gray);
@@ -614,6 +599,21 @@ header .search-bar .s-bottom button {
   font-weight: 300;
   line-height: 144.4%;
 }
+.main-books .button,
+.books .button {
+  width: 100%;
+  display: none;
+  margin-top: 30px;
+  justify-content: center;
+}
+.main-books .button a,
+.books .button a {
+  color: var(--brown);
+  padding: 10px 30px;
+  background-color: var(--cream);
+  border-radius: 15px;
+  font-size: 19px;
+}
 
 .compony-info {
   padding-inline: 80px;
@@ -679,10 +679,18 @@ header .search-bar .s-bottom button {
 .yozuvchilar .container .bottom .card:hover .card-bottom .author-info h2 {
   color: var(--cream);
 }
+.yozuvchilar .container .bottom .card .card-top {
+  width: 100%;
+  overflow: hidden;
+}
+.yozuvchilar .container .bottom .card .card-top img {
+  width: 100%;
+  height: 100%;
+}
 .yozuvchilar .container .bottom .card .card-bottom {
   height: 45%;
   text-align: center;
-  background-image: url(".../imgs/author naqsh1.svg");
+  background-image: url("../imgs/author naqsh1.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-position-y: -50px;
@@ -738,6 +746,19 @@ header .search-bar .s-bottom button {
 .yozuvchilar .container .bottom .card-top img {
   width: 100%;
   height: 100%;
+}
+.yozuvchilar .container .button {
+  width: 100%;
+  display: none;
+  margin-top: 30px;
+  justify-content: center;
+}
+.yozuvchilar .container .button a {
+  color: var(--brown);
+  padding: 10px 30px;
+  background-color: var(--cream);
+  border-radius: 15px;
+  font-size: 19px;
 }
 
 .contact-us {
@@ -853,10 +874,10 @@ header .search-bar .s-bottom button {
 
 footer {
   width: 100%;
-  height: 105px;
+  height: 80px;
   display: flex;
   align-items: center;
-  padding: 0 120px;
+  padding: 0 80px;
   border-top: solid var(--light-gray) 2px;
   justify-content: space-between;
   overflow: hidden;
@@ -881,7 +902,7 @@ footer .right {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 45%;
+  gap: 20px;
 }
 footer .right .logo-con {
   display: flex;

@@ -1,15 +1,20 @@
 @import url(../style.css);
 
-body {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
 // mualliflar styles
 .authors {
   margin-top: 30px;
 
   .top {
+    select {
+      display: none;
+      outline: none;
+      border-radius: 10px;
+      background-color: var(--cream);
+      color: var(--brown);
+      border: none;
+      padding: 10px;
+    }
+
     h1 {
       color: var(--cream);
       font-family: Rotterburg Stylish FREE;
@@ -69,6 +74,16 @@ body {
 
       &:hover .card-bottom .author-info h2 {
         color: var(--cream);
+      }
+
+      .card-top {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       .card-bottom {

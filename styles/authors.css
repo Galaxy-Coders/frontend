@@ -1,11 +1,15 @@
 @import url(../style.css);
-body {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
 .authors {
   margin-top: 30px;
+}
+.authors .top select {
+  display: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: var(--cream);
+  color: var(--brown);
+  border: none;
+  padding: 10px;
 }
 .authors .top h1 {
   color: var(--cream);
@@ -59,6 +63,14 @@ body {
 }
 .authors .bottom .card:hover .card-bottom .author-info h2 {
   color: var(--cream);
+}
+.authors .bottom .card .card-top {
+  width: 100%;
+  overflow: hidden;
+}
+.authors .bottom .card .card-top img {
+  width: 100%;
+  height: 100%;
 }
 .authors .bottom .card .card-bottom {
   height: 45%;

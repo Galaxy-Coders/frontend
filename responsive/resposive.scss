@@ -1,8 +1,11 @@
+@import url(../style.css);
 
 @media screen and (max-width: 1536px) {
-  .main-books{
-    .bottom{
-      .card-13, .card-14{
+  .main-books {
+    .bottom {
+
+      .card-13,
+      .card-14 {
         display: none;
       }
     }
@@ -10,43 +13,46 @@
 }
 
 @media screen and (max-width: 768px) {
-  .nav-fixed{
+  .nav-fixed {
     padding: 0 60px;
     height: 85px;
-    .ul-desktop{
+
+    .ul-desktop {
       display: none;
     }
 
-    .profile{
+    .profile {
       display: none;
     }
-    .gamburger-menu{
+
+    .gamburger-menu {
       display: flex;
     }
   }
 
-  header{
+  header {
 
-    .slider
-    {
+    .slider {
       width: 100%;
       height: 220px;
       border-radius: 0;
       background-size: 103%;
       justify-content: center;
-      .img{
+
+      .img {
         display: flex;
       }
-  
-      .slider-text{
+
+      .slider-text {
         width: 220px;
         left: 60px;
-        h1{
+
+        h1 {
           font-size: 2.2rem;
         }
 
-        .slide-btn{
-          div{
+        .slide-btn {
+          div {
             width: 45px;
           }
         }
@@ -54,25 +60,26 @@
     }
 
 
-    .search-bar{
+    .search-bar {
       width: 550px;
       height: 100px;
       justify-content: space-evenly;
       transform: translateY(-40px);
 
-      h1{
+      h1 {
         font-size: 1.6rem;
         margin: 0;
       }
-      .s-bottom{
-        .search-inp{
+
+      .s-bottom {
+        .search-inp {
           width: 400px;
           padding: 5px 20px;
           font-size: 15px;
           border-radius: 10px;
         }
 
-        button{
+        button {
           padding: 4px 20px 4px 30px;
           background-size: 18px;
           border-radius: 10px;
@@ -83,9 +90,185 @@
   }
 
 
-  .main-books{
+  .main-books {
     margin-top: 0px;
     padding: 0 92px;
   }
 }
 
+@media screen and (max-width: 376px) {
+  nav {
+    padding-inline: 20px !important;
+
+    .nav-logo {
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .compony-info {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  header {
+    .slider {
+      width: 90% !important;
+      height: 200px;
+      border-radius: 21px;
+
+      .slides {
+        a {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          padding: 20px;
+
+          h1 {
+            width: 200px;
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .slider-control {
+        left: 20px;
+        bottom: 50px;
+      }
+    }
+
+    .search-bar {
+      width: 95%;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .s-bottom {
+        gap: 10px;
+        margin-top: 10px;
+
+        .search-inp {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .main-books,
+  .books {
+    padding-inline: 20px;
+
+    .top {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bottom {
+      gap: 20px;
+
+      .card {
+        width: 155px;
+      }
+    }
+    .button{
+      display: flex;
+    }
+  }
+  .compony-info{
+    padding-inline: 20px;
+    .container{
+      padding: 20px;
+      justify-content: center;
+      background: none;
+    }
+  }
+  .yozuvchilar{
+    padding-inline: 20px;
+    .container{
+      .top{
+        h1{
+          font-size: 1.5rem
+        }
+      }
+      .bottom{
+        gap: 20px;  
+        .card{
+          width: 155px;
+        }
+      }
+      .button{
+        display: flex;
+      }
+    }
+  }
+  .contact-us{
+    margin-top: 50px;
+    padding: 20px;
+    .top{
+      h1{
+        font-size: 1.5rem;
+      }
+    }
+    .bottom{
+      margin-top: 20px;
+    }
+  }
+  footer{
+    padding-inline: 20px;
+    .foot-logo{
+      font-size: 1.5rem;
+    }
+    p{
+      display: none;
+    }
+    .right{
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .books{
+    .top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      select{
+        display: block;
+      }
+      .category{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .authors{
+    padding-inline: 20px;
+    .top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1{
+        font-size: 1.5rem;
+      }
+      .category{
+        display: none;
+      }
+      select{
+        display: block;
+      }
+    }
+    .bottom{
+      gap: 20px;  
+      .card{
+        width: 155px;
+      }
+    }
+  }
+}

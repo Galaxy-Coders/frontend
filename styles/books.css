@@ -1,4 +1,13 @@
 @import url(../style.css);
+.books .top select {
+  display: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: var(--cream);
+  color: var(--brown);
+  border: none;
+  padding: 10px;
+}
 .books .top .category {
   margin-top: 30px;
   width: 100%;
