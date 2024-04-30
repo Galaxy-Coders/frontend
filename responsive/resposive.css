@@ -8,7 +8,6 @@
 @media screen and (max-width: 768px) {
   .nav-fixed {
     padding: 0 60px;
-    height: 85px;
   }
   .nav-fixed .ul-desktop {
     display: none;
@@ -42,7 +41,6 @@
   header .search-bar {
     width: 550px;
     height: 100px;
-    justify-content: space-evenly;
     transform: translateY(-40px);
   }
   header .search-bar h1 {
@@ -68,13 +66,16 @@
 }
 @media screen and (max-width: 426px) {
   nav {
-    padding-inline: 20px !important;
+    padding: 10px 20px !important;
   }
   nav .nav-logo a {
     font-size: 1.5rem;
   }
   .compony-info .container {
     flex-direction: column;
+  }
+  header {
+    padding-top: 100px;
   }
   header .slider {
     width: 90% !important;
@@ -106,7 +107,10 @@
     margin-top: 10px;
   }
   header .search-bar .s-bottom .search-inp {
-    width: 200px;
+    width: 250px;
+  }
+  .books {
+    margin-top: 100px;
   }
   .main-books,
   .books {
@@ -118,7 +122,7 @@
   }
   .main-books .bottom,
   .books .bottom {
-    gap: 20px;
+    gap: 35px;
   }
   .main-books .bottom .card,
   .books .bottom .card {

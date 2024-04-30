@@ -5,13 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kitoblar</title>
-
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="../styles/books.css">
   <link rel="stylesheet" href="../responsive/resposive.css">
   <link rel="shortcut icon" href=".../imgs/kitob.svg" type="image/x-icon">
 </head>
 
 <body>
+
+  <nav class="nav-fixed">
+    <div class="nav-logo">
+      <a href="/">badiiyat</a>
+    </div>
+    <ul class="ul-desktop">
+      <li><a href="/">Bosh sahifa</a></li>
+      <li onmouseover="subCategoryIn()" onmouseout="subCategoryOut()">
+        <a href="#">Kitoblar</a>
+      </li>
+      <div class="sub-category" onmouseover="subCategoryIn()" onmouseout="subCategoryOut()">
+        <a href="/pages/books.html">Jadidlar adabiyoti</a>
+        <a href="/pages/books.html">Sovet adabiyoti</a>
+        <a href="/pages/books.html">Mustaqillik davri adabiyoti</a>
+        <a href="/pages/books.html">Temuriylar davri adabiyoti</a>
+        <a href="/pages/books.html">Jahon adabiyoti</a>
+      </div>
+      <li><a href="/pages/authors.html">Yozuvchilar</a></li>
+      <li><a href="#contact-us">Biz bilan bog'lanish</a></li>
+    </ul>
+
+    <div class="profile">
+      <a href="pages/register.html" class="log">Sign in</a>
+      <a href="pages/login.html" class="sign">Sign up</a>
+    </div>
+    <div class="gamburger-menu"></div>
+  </nav>
+
+  <div class="header-fixer">
+    <div class="top">
+      <div class="profile">
+        <a href="pages/register.html" class="sign">Kirish</a>
+      </div>
+      <div class="clear-btn"></div>
+    </div>
+    <div class="center">
+      <ul class="ul-tablet">
+        <li><a href="/">Bosh sahifa</a></li>
+        <details>
+          <summary>Kitoblar</summary>
+          <a href="/pages/books.html">Jadidlar adabiyoti</a>
+          <a href="/pages/books.html">Sovet adabiyoti</a>
+          <a href="/pages/books.html">Mustaqillik davri adabiyoti</a>
+          <a href="/pages/books.html">Temuriylar davri adabiyoti</a>
+          <a href="/pages/books.html">Jahon adabiyoti</a>
+        </details>
+        <li><a href="/pages/authors.html">Yozuvchilar</a></li>
+        <li><a href="#contact-us">Biz bilan bog'lanish</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="head-bg"></div>
+
   <div class="books">
     <div class="top">
       <h1>Kitoblar</h1>
@@ -216,6 +270,53 @@
     </div>
   </div>
 
+  <div class="contact-us" id="contact-us">
+    <div class="top">
+      <h1>Biz bilan aloqa</h1>
+    </div>
+    <div class="bottom">
+      <div class="right">
+        <form>
+          <input type="text" placeholder="Ism familiyangizni kriting..." required>
+          <input type="number" placeholder="Telefon raqamingizni kiriting..." required>
+          <textarea name="" id="" cols="30" rows="10" required placeholder="Izoh qoldiring..."></textarea>
+          <button type="submit">Jo'natish</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">
+      <a href="#">badiiyat</a>
+    </div>
+
+    <p class="center">
+      Biz bilan bog'lanish | +998 90 781 79 49
+    </p>
+
+    <div class="right">
+      <a href="#" class="logo-con">
+        <img width="40" src="/imgs/youtube.svg" alt="">
+        <p>You Tube</p>
+      </a>
+      <a href="#" class="logo-con">
+        <img width="35" src="/imgs/Telegram.svg" alt="">
+        <p>Telegram</p>
+      </a>
+      <a href="#" class="logo-con">
+        <img width="35" src="/imgs/insta.svg" alt="">
+        <p>Instagram</p>
+      </a>
+      <a href="#" class="logo-con">
+        <img width="40" src="/imgs/twitter.svg" alt="">
+        <p>Twitter</p>
+      </a>
+    </div>
+
+  </footer>
+
+  <script src="/script.js"></script>
   <script src="../Javascript/book.js"></script>
 </body>
 

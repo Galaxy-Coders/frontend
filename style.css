@@ -291,14 +291,17 @@ li {
   width: 100%;
   margin-top: 80px;
 }
+.header-fixer .center .ul-tablet a {
+  color: var(--light-gray);
+}
 .header-fixer .center .ul-tablet details {
   font-size: 1.5rem;
-  color: var(--text-gray);
+  color: var(--light-gray);
+  padding: 10px 0;
 }
 .header-fixer .center .ul-tablet details a {
   margin-left: 20px;
   display: block;
-  color: var(--light-gray);
   font-family: HelveticaNeueCyr;
   font-size: 16px;
   font-weight: 300;
@@ -315,28 +318,9 @@ li {
   overflow: hidden;
   transition: 0.5s;
 }
-.header-fixer .center .ul-tablet li::before {
-  content: "";
-  width: 100%;
-  height: 5px;
-  bottom: -5px;
-  background: var(--white);
-  position: absolute;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-.header-fixer .center .ul-tablet li:hover::before {
-  bottom: 5px;
-}
-.header-fixer .center .ul-tablet li:hover {
-  transform: scale(1.2);
-}
-.header-fixer .center .ul-tablet li:hover a {
-  color: var(--white);
-}
 .header-fixer .center .ul-tablet li a {
   font-size: 1.5rem;
-  color: var(--text-gray);
+  color: var(--light-gray);
 }
 
 .nowork {
@@ -527,7 +511,6 @@ header .search-bar .s-bottom button {
 
 .main-books,
 .books {
-  margin-top: 30px;
   padding: 0 120px;
 }
 .main-books .top h1,

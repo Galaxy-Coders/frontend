@@ -312,15 +312,18 @@ li {
             padding-left: 20px;
             width: 100%;
             margin-top: 80px;
+            a{
+                color: var(--light-gray);
+            }
 
             details {
                 font-size: 1.5rem;
-                color: var(--text-gray);
+                color: var(--light-gray);
+                padding: 10px 0;
 
                 a {
                     margin-left: 20px;
                     display: block;
-                    color: var(--light-gray);
                     font-family: HelveticaNeueCyr;
                     font-size: 16px;
                     font-weight: 300;
@@ -332,39 +335,15 @@ li {
             li {
                 display: flex;
                 justify-content: center;
-                padding: 10px 0;
+                padding: 10px 0; 
                 width: fit-content;
                 position: relative;
                 overflow: hidden;
                 transition: .5s;
 
-                &::before {
-                    content: '';
-                    width: 100%;
-                    height: 5px;
-                    bottom: -5px;
-                    background: var(--white);
-                    position: absolute;
-                    border-radius: 10px;
-                    transition: .5s;
-                }
-
-                &:hover::before {
-                    bottom: 5px;
-                }
-
-                &:hover {
-                    transform: scale(1.2);
-                }
-
-
-                &:hover a {
-                    color: var(--white);
-                }
-
                 a {
                     font-size: 1.5rem;
-                    color: var(--text-gray);
+                    color: var(--light-gray);
                 }
             }
         }
@@ -571,7 +550,6 @@ header {
 
 .main-books,
 .books {
-    margin-top: 30px;
     padding: 0 120px;
 
     .top {
