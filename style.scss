@@ -107,7 +107,46 @@ li {
         display: flex;
         align-items: center;
         list-style: none;
-
+        
+        .books{
+            position: relative;
+            .sub-category {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                padding: 10px 20px;
+                background-color: var(--black);
+                border-radius: 15px;
+                border: 1px solid var(--light-gray);
+                left: 36%;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.5s;
+                transition: opacity 0.5s;
+    
+                a {
+                    color: var(--light-gray);
+                    font-family: HelveticaNeueCyr;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 144.4%;
+                    transition: 0.5s;
+                }
+    
+                a:hover {
+                    color: var(--white);
+                }
+            }
+            &:hover{
+                .sub-category{
+                    display: flex;
+                }
+            }
+        }
         li {
             display: flex;
             align-items: center;
@@ -145,38 +184,6 @@ li {
                 font-weight: 300;
                 line-height: 144.4%;
                 transition: 0.5s;
-            }
-        }
-
-        .sub-category {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            z-index: 1;
-            padding: 10px 20px;
-            background-color: var(--black);
-            border-radius: 15px;
-            border: 1px solid var(--light-gray);
-            left: 36%;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s;
-            transition: opacity 0.5s;
-
-            a {
-                color: var(--light-gray);
-                font-family: HelveticaNeueCyr;
-                font-size: 16px;
-                font-weight: 300;
-                line-height: 144.4%;
-                transition: 0.5s;
-            }
-
-            a:hover {
-                color: var(--white);
             }
         }
     }
@@ -459,7 +466,7 @@ header {
 
             div {
                 width: 57.391px;
-                height: 3px;
+                height: 7px;
                 border-radius: 10px;
                 background: var(--light-gray);
                 transition: .5s;

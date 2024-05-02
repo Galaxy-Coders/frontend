@@ -5,9 +5,9 @@
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .nav-fixed {
-    padding: 0 60px;
+    padding: 20px 40px;
   }
   .nav-fixed .ul-desktop {
     display: none;
@@ -18,34 +18,41 @@
   .nav-fixed .gamburger-menu {
     display: flex;
   }
+  header {
+    padding-top: 100px;
+    padding-inline: 40px;
+  }
   header .slider {
     width: 100%;
-    height: 220px;
-    border-radius: 0;
+    height: 250px;
     background-size: 103%;
     justify-content: center;
   }
-  header .slider .img {
-    display: flex;
+  header .slider .slides a {
+    padding-top: 20px;
+    padding-left: 40px;
   }
-  header .slider .slider-text {
-    width: 220px;
-    left: 60px;
+  header .slider .slides a h1 {
+    font-size: 45px;
   }
-  header .slider .slider-text h1 {
-    font-size: 2.2rem;
+  header .slider .slider-control {
+    left: 40px;
+    bottom: 65px;
   }
-  header .slider .slider-text .slide-btn div {
-    width: 45px;
+  header .slider .slider-control div {
+    height: 7px;
   }
   header .search-bar {
-    width: 550px;
+    width: 600px !important;
     height: 100px;
     transform: translateY(-40px);
   }
   header .search-bar h1 {
     font-size: 1.6rem;
     margin: 0;
+  }
+  header .search-bar .s-bottom {
+    margin-top: 10px;
   }
   header .search-bar .s-bottom .search-inp {
     width: 400px;
@@ -59,11 +66,12 @@
     border-radius: 10px;
     background-position: 10px 9px;
   }
-  .main-books {
-    margin-top: 0px;
-    padding: 0 92px;
-  }
 }
+.main-books {
+  margin-top: 0px;
+  padding: 0 92px;
+}
+
 @media screen and (max-width: 426px) {
   nav {
     padding: 10px 20px !important;
