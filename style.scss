@@ -78,13 +78,11 @@ li {
 .nav-fixed {
     z-index: 100;
     width: 100%;
-    height: fit-content;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    top: 0;
-    left: 0;
     position: fixed;
     background: var(--black);
     padding: 0 80px;
@@ -107,25 +105,24 @@ li {
         display: flex;
         align-items: center;
         list-style: none;
-        
         .books{
-            position: relative;
-            .sub-category {
+            margin: 0;
+            &:hover .sub-category{
+                display: flex;
+            }
+            .sub-category{
+                width: max-content;
+                top: 100%;
+                left: -40%;
                 display: none;
                 flex-direction: column;
                 gap: 10px;
                 position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 1;
+                z-index: 1000;
                 padding: 10px 20px;
                 background-color: var(--black);
                 border-radius: 15px;
                 border: 1px solid var(--light-gray);
-                left: 36%;
-                opacity: 0;
-                pointer-events: none;
-                transition: opacity 0.5s;
                 transition: opacity 0.5s;
     
                 a {
@@ -138,13 +135,11 @@ li {
                 }
     
                 a:hover {
-                    color: var(--white);
+                    color: var(--white) !important;
                 }
             }
-            &:hover{
-                .sub-category{
-                    display: flex;
-                }
+            &:hover a {
+                transform: scale(1) !important;
             }
         }
         li {
@@ -153,7 +148,7 @@ li {
             padding: 30px 20px;
             cursor: pointer;
             position: relative;
-            overflow: hidden;
+            // overflow: hidden;
             font-family: HelveticaNeueCyr;
 
             &:hover a {
@@ -171,10 +166,12 @@ li {
                 left: 0;
                 bottom: -8px;
                 transition: .5s;
+                display: none;
             }
 
             &:hover::before {
                 bottom: 0px;
+                display: block;
             }
 
             a {
@@ -209,6 +206,10 @@ li {
             color: var(--light-gray);
             font-family: Steinbeck;
             font-weight: 400;
+            transition: 0.5s;
+            &:hover{
+                color:var(--white) ;
+            }
         }
     }
 

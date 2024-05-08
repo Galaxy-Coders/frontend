@@ -1,8 +1,63 @@
 @import url(../style.css);
-@media screen and (max-width: 1536px) {
-  .main-books .bottom .card-13,
-  .main-books .bottom .card-14 {
-    display: none;
+@media screen and (max-width: 1025px) and (min-width: 769px) {
+  .nav-fixed {
+    padding: 0 40px;
+  }
+  header .slider {
+    width: 90%;
+  }
+  header .search-bar {
+    width: 800px;
+  }
+  header .search-bar .s-bottom .search-inp {
+    width: 500px;
+  }
+  .books {
+    padding: 0 90px;
+  }
+  .authors .bottom {
+    padding-inline: 50px;
+  }
+  footer {
+    padding: 0 60px;
+  }
+  .signup .left, .signup .right {
+    width: 50%;
+    background-position: 0;
+  }
+  .signup .right .text h1 {
+    font-size: 2rem;
+  }
+  .signup .right .text p {
+    font-size: 0.7rem;
+  }
+  .signup .right form input {
+    padding: 10px 20px;
+  }
+  .signup .right form input:focus {
+    transform: scale(1.02);
+  }
+  .signup .right form button a {
+    padding: 10px 20px;
+  }
+  .signin .left, .signin .right {
+    width: 50%;
+    background-position: 0;
+  }
+  .signin .right .text h1 {
+    font-size: 2rem;
+  }
+  .signin .right .text p {
+    font-size: 0.7rem;
+  }
+  .signin .right form input {
+    padding: 10px 20px;
+  }
+  .signin .right form input:focus {
+    transform: scale(1.02);
+  }
+  .signin .right form button a {
+    padding: 10px 20px;
   }
 }
 @media screen and (max-width: 769px) {

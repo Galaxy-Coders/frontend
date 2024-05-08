@@ -56,19 +56,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(nextSlide, 4000);
 });
-
-
-var log = document.querySelector('.log')
-var sign = document.querySelector('.sign')
-
-const subCategory = document.querySelector('.sub-category');
-
-function subCategoryIn() {
-  subCategory.style.opacity = '1';
-  subCategory.style.pointerEvents = 'auto';
-}
-
-function subCategoryOut() {
-  subCategory.style.opacity = '0';
-  subCategory.style.pointerEvents = 'none';
-}

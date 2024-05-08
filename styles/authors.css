@@ -54,6 +54,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+  padding-inline: 100px;
 }
 .authors .bottom .card {
   width: 173.33px;

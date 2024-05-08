@@ -72,14 +72,11 @@ li {
 .nav-fixed {
   z-index: 100;
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  top: 0;
-  left: 0;
   position: fixed;
   background: var(--black);
   padding: 0 80px;
@@ -104,24 +101,25 @@ li {
   list-style: none;
 }
 .nav-fixed .ul-desktop .books {
-  position: relative;
+  margin: 0;
+}
+.nav-fixed .ul-desktop .books:hover .sub-category {
+  display: flex;
 }
 .nav-fixed .ul-desktop .books .sub-category {
+  width: -moz-max-content;
+  width: max-content;
+  top: 100%;
+  left: -40%;
   display: none;
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
+  z-index: 1000;
   padding: 10px 20px;
   background-color: var(--black);
   border-radius: 15px;
   border: 1px solid var(--light-gray);
-  left: 36%;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 .nav-fixed .ul-desktop .books .sub-category a {
@@ -133,10 +131,10 @@ li {
   transition: 0.5s;
 }
 .nav-fixed .ul-desktop .books .sub-category a:hover {
-  color: var(--white);
+  color: var(--white) !important;
 }
-.nav-fixed .ul-desktop .books:hover .sub-category {
-  display: flex;
+.nav-fixed .ul-desktop .books:hover a {
+  transform: scale(1) !important;
 }
 .nav-fixed .ul-desktop li {
   display: flex;
@@ -144,7 +142,6 @@ li {
   padding: 30px 20px;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
   font-family: HelveticaNeueCyr;
 }
 .nav-fixed .ul-desktop li:hover a {
@@ -161,9 +158,11 @@ li {
   left: 0;
   bottom: -8px;
   transition: 0.5s;
+  display: none;
 }
 .nav-fixed .ul-desktop li:hover::before {
   bottom: 0px;
+  display: block;
 }
 .nav-fixed .ul-desktop li a {
   color: var(--light-gray);
@@ -195,6 +194,10 @@ li {
   color: var(--light-gray);
   font-family: Steinbeck;
   font-weight: 400;
+  transition: 0.5s;
+}
+.nav-fixed .profile .log:hover {
+  color: var(--white);
 }
 .nav-fixed .gamburger-menu {
   display: none;

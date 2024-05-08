@@ -1,12 +1,95 @@
 @import url(../style.css);
 
-@media screen and (max-width: 1536px) {
-  .main-books {
-    .bottom {
+@media screen and (max-width:1025px) and (min-width:769px) {
+  .nav-fixed{
+    padding: 0 40px;
+  }
+  header{
+    .slider{
+      width: 90%;
+    }
+    .search-bar{
+      width: 800px;
+      .s-bottom{
+        .search-inp{
+          width: 500px;
+        }
+      }
+    }
+  }
 
-      .card-13,
-      .card-14 {
-        display: none;
+  .books{
+    padding: 0  90px;
+  }
+
+  .authors{
+    .bottom{
+      padding-inline: 50px;
+    }
+  }
+
+  footer{
+    padding: 0 60px;
+  }
+
+  .signup{
+    .left, .right{
+      width: 50%;
+      background-position: 0;
+    }
+    .right{
+      .text{
+        h1{
+          font-size: 2rem;
+        }
+        p{
+          font-size: 0.7rem;
+        }
+      }
+      form{
+        input{
+          padding: 10px 20px;
+
+          &:focus{
+            transform: scale(1.02);
+          }
+        }
+        button{
+          a{
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .signin{
+    .left, .right{
+      width: 50%;
+      background-position: 0;
+    }
+    .right{
+      .text{
+        h1{
+          font-size: 2rem;
+        }
+        p{
+          font-size: 0.7rem;
+        }
+      }
+      form{
+        input{
+          padding: 10px 20px;
+
+          &:focus{
+            transform: scale(1.02);
+          }
+        }
+        button{
+          a{
+            padding: 10px 20px;
+          }
+        }
       }
     }
   }
