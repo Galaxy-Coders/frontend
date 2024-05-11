@@ -1,61 +1,62 @@
 @import url(../style.css);
 
-@media screen and (max-width:1025px) and (min-width:769px) {
-  .nav-fixed{
+@media screen and (max-width: 1025px) and (min-width: 769px) {
+  .nav-fixed {
     padding: 0 40px;
   }
-  header{
-    .slider{
+  header {
+    .slider {
       width: 90%;
     }
-    .search-bar{
+    .search-bar {
       width: 800px;
-      .s-bottom{
-        .search-inp{
+      .s-bottom {
+        .search-inp {
           width: 500px;
         }
       }
     }
   }
 
-  .books{
-    padding: 0  90px;
+  .books {
+    padding: 0 90px;
   }
 
-  .authors{
-    .bottom{
+  .authors {
+    .bottom {
       padding-inline: 50px;
     }
   }
 
-  footer{
+  footer {
     padding: 0 60px;
   }
 
-  .signup{
-    .left, .right{
+  .signup {
+    .left,
+    .right {
       width: 50%;
       background-position: 0;
     }
-    .right{
-      .text{
-        h1{
+    .right {
+      .text {
+        h1 {
           font-size: 2rem;
         }
-        p{
+        p {
           font-size: 0.7rem;
         }
       }
-      form{
-        input{
+      form {
+        input {
           padding: 10px 20px;
 
-          &:focus{
+          &:focus {
             transform: scale(1.02);
           }
         }
-        button{
-          a{
+        button {
+          a {
             padding: 10px 20px;
           }
         }
@@ -63,41 +64,46 @@
     }
   }
 
-  .signin{
-    .left, .right{
+  .signin {
+    .left,
+    .right {
       width: 50%;
       background-position: 0;
     }
-    .right{
-      .text{
-        h1{
+    .right {
+      .text {
+        h1 {
           font-size: 2rem;
         }
-        p{
+        p {
           font-size: 0.7rem;
         }
       }
-      form{
-        input{
+      form {
+        input {
           padding: 10px 20px;
 
-          &:focus{
+          &:focus {
             transform: scale(1.02);
           }
         }
-        button{
-          a{
+        button {
+          a {
             padding: 10px 20px;
           }
         }
       }
     }
+  }
+
+  footer {
+    padding: 0 40px;
   }
 }
 
 @media screen and (max-width: 769px) {
   .nav-fixed {
-    padding: 20px 40px;
+    padding: 10px 40px;
 
     .ul-desktop {
       display: none;
@@ -116,69 +122,115 @@
     padding-top: 100px;
     padding-inline: 40px;
     .slider {
-        width: 100%;
-        height: 250px;
-        background-size: 103%;
-        justify-content: center;
-        .slides{
-          a{
-            padding-top: 20px;
-            padding-left: 40px;
-            h1{
-              font-size: 45px;
-            }
-          }
-        }
-        .slider-control{
-          left: 40px;
-          bottom: 65px;
-          div{
-            height: 7px;
+      width: 100%;
+      height: 250px;
+      background-size: 103%;
+      justify-content: center;
+      .slides {
+        a {
+          padding-top: 20px;
+          padding-left: 40px;
+          h1 {
+            font-size: 45px;
           }
         }
       }
-      .search-bar {
-        width: 600px !important;
-        height: 100px;
-        transform: translateY(-40px);
-        h1 {
-          font-size: 1.6rem;
-          margin: 0;
-        }
-  
-        .s-bottom {
-          margin-top: 10px; 
-          .search-inp {
-            width: 400px;
-            padding: 5px 20px;
-            font-size: 15px;
-            border-radius: 10px;
-          }
-  
-          button {
-            padding: 4px 20px 4px 30px;
-            background-size: 18px;
-            border-radius: 10px;
-            background-position: 10px 9px;
-          }
+      .slider-control {
+        left: 40px;
+        bottom: 65px;
+        div {
+          height: 7px;
         }
       }
     }
+    .search-bar {
+      width: 600px !important;
+      height: 100px;
+      transform: translateY(-40px);
+      h1 {
+        font-size: 1.6rem;
+        margin: 0;
+      }
 
+      .s-bottom {
+        margin-top: 10px;
+        .search-inp {
+          width: 400px;
+          padding: 5px 20px;
+          font-size: 15px;
+          border-radius: 10px;
+        }
 
+        button {
+          padding: 4px 20px 4px 30px;
+          background-size: 18px;
+          border-radius: 10px;
+          background-position: 10px 9px;
+        }
+      }
+    }
   }
 
+  .main-books{
+    padding: 0 40px;
+  }
 
-.main-books {
-  margin-top: 0px;
-  padding: 0 92px;
+  .compony-info{
+    padding: 0 40px;
+    .container{
+      gap: 40px;
+     padding-inline: 40px;
+    }
+  }
+
+  .yozuvchilar{
+    padding: 0 40px;
+  }
+
+  .books{
+    padding: 0 40px;
+  }
+
+  .authors{
+    .category{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    ul{
+      width: 90%;
+      flex-wrap: wrap;
+      gap: 25px !important;
+    }
+    .bottom{
+      padding-inline: 40px;
+    }
+  }
+
+  .signin, .signup{
+    .left, .right {
+      width: 50%;
+      background-position: -40px ;
+    }
+  }
+
+  footer{
+    padding: 10px 40px;
+    .right{
+      gap: 10px;
+      a{
+        p{
+          display: none;
+        }
+      }
+    }
+  }
 }
-
 
 @media screen and (max-width: 426px) {
   nav {
-    padding: 10px 20px  !important;
-    
+    padding: 10px 20px !important;
+
     .nav-logo {
       a {
         font-size: 1.5rem;
@@ -237,10 +289,10 @@
     }
   }
 
-  .books{
+  .books {
     margin-top: 100px;
   }
-  
+
   .main-books,
   .books {
     padding-inline: 20px;
@@ -259,73 +311,73 @@
         width: 155px;
       }
     }
-    .button{
+    .button {
       display: flex;
     }
   }
-  .compony-info{
+  .compony-info {
     padding-inline: 20px;
-    .container{
+    .container {
       padding: 20px;
       justify-content: center;
       background: none;
     }
   }
-  .yozuvchilar{
+  .yozuvchilar {
     padding-inline: 20px;
-    .container{
-      .top{
-        h1{
-          font-size: 1.5rem
+    .container {
+      .top {
+        h1 {
+          font-size: 1.5rem;
         }
       }
-      .bottom{
-        gap: 20px;  
-        .card{
+      .bottom {
+        gap: 20px;
+        .card {
           width: 155px;
         }
       }
-      .button{
+      .button {
         display: flex;
       }
     }
   }
-  .contact-us{
+  .contact-us {
     margin-top: 50px;
     padding: 20px;
-    .top{
-      h1{
+    .top {
+      h1 {
         font-size: 1.5rem;
       }
     }
-    .bottom{
+    .bottom {
       margin-top: 20px;
     }
   }
-  footer{
+  footer {
     padding-inline: 20px;
-    .foot-logo{
+    .foot-logo {
       font-size: 1.5rem;
     }
-    p{
+    p {
       display: none;
     }
-    .right{
+    .right {
       gap: 10px;
     }
   }
 }
 
 @media screen and (max-width: 426px) {
-  .books{
-    .top{
+  .books {
+    .top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      select{
+      select {
         display: block;
       }
-      .category{
+      .category {
         display: none;
       }
     }
@@ -333,25 +385,25 @@
 }
 
 @media screen and (max-width: 426px) {
-  .authors{
+  .authors {
     padding-inline: 20px;
-    .top{
+    .top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      h1{
+      h1 {
         font-size: 1.5rem;
       }
-      .category{
+      .category {
         display: none;
       }
-      select{
+      select {
         display: block;
       }
     }
-    .bottom{
-      gap: 20px;  
-      .card{
+    .bottom {
+      gap: 20px;
+      .card {
         width: 155px;
       }
     }
@@ -359,51 +411,52 @@
 }
 
 @media screen and (max-width: 426px) {
-  .signin, .signup{
+  .signin,
+  .signup {
     display: block;
-    .left{
+    .left {
       display: none;
     }
-    .right{
+    .right {
       width: 100%;
     }
   }
 }
 
 @media screen and (max-width: 426px) {
-  .book{
+  .book {
     margin-top: 30px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     padding-inline: 20px;
-    .left{
+    .left {
       padding: 0;
-      .img{
-        img{
+      .img {
+        img {
           width: 275px;
         }
       }
     }
-    .right{
+    .right {
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      .full-info{
-        .top{
-          .hr{
+      .full-info {
+        .top {
+          .hr {
             width: 208px;
           }
         }
       }
-      .formats{
-        .top{
-          text-align: center; 
+      .formats {
+        .top {
+          text-align: center;
         }
-        .bottom{
+        .bottom {
           flex-direction: column;
-          .two{
+          .two {
             margin-top: 20px;
           }
         }
@@ -411,7 +464,7 @@
     }
   }
 
-  .kitob-haqida{
+  .kitob-haqida {
     padding-left: 20px;
   }
 }

@@ -21,7 +21,8 @@
   footer {
     padding: 0 60px;
   }
-  .signup .left, .signup .right {
+  .signup .left,
+  .signup .right {
     width: 50%;
     background-position: 0;
   }
@@ -40,7 +41,8 @@
   .signup .right form button a {
     padding: 10px 20px;
   }
-  .signin .left, .signin .right {
+  .signin .left,
+  .signin .right {
     width: 50%;
     background-position: 0;
   }
@@ -59,10 +61,13 @@
   .signin .right form button a {
     padding: 10px 20px;
   }
+  footer {
+    padding: 0 40px;
+  }
 }
 @media screen and (max-width: 769px) {
   .nav-fixed {
-    padding: 20px 40px;
+    padding: 10px 40px;
   }
   .nav-fixed .ul-desktop {
     display: none;
@@ -121,12 +126,49 @@
     border-radius: 10px;
     background-position: 10px 9px;
   }
+  .main-books {
+    padding: 0 40px;
+  }
+  .compony-info {
+    padding: 0 40px;
+  }
+  .compony-info .container {
+    gap: 40px;
+    padding-inline: 40px;
+  }
+  .yozuvchilar {
+    padding: 0 40px;
+  }
+  .books {
+    padding: 0 40px;
+  }
+  .authors .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .authors ul {
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 25px !important;
+  }
+  .authors .bottom {
+    padding-inline: 40px;
+  }
+  .signin .left, .signin .right, .signup .left, .signup .right {
+    width: 50%;
+    background-position: -40px;
+  }
+  footer {
+    padding: 10px 40px;
+  }
+  footer .right {
+    gap: 10px;
+  }
+  footer .right a p {
+    display: none;
+  }
 }
-.main-books {
-  margin-top: 0px;
-  padding: 0 92px;
-}
-
 @media screen and (max-width: 426px) {
   nav {
     padding: 10px 20px !important;
@@ -280,13 +322,16 @@
   }
 }
 @media screen and (max-width: 426px) {
-  .signin, .signup {
+  .signin,
+  .signup {
     display: block;
   }
-  .signin .left, .signup .left {
+  .signin .left,
+  .signup .left {
     display: none;
   }
-  .signin .right, .signup .right {
+  .signin .right,
+  .signup .right {
     width: 100%;
   }
 }
