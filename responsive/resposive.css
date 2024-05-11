@@ -183,7 +183,7 @@
     padding-top: 100px;
   }
   header .slider {
-    width: 90% !important;
+    width: 400px;
     height: 200px;
     border-radius: 21px;
   }
@@ -202,7 +202,7 @@
     bottom: 50px;
   }
   header .search-bar {
-    width: 95%;
+    width: 350px !important;
   }
   header .search-bar h1 {
     font-size: 1.5rem;
@@ -212,7 +212,7 @@
     margin-top: 10px;
   }
   header .search-bar .s-bottom .search-inp {
-    width: 250px;
+    width: 200px;
   }
   .books {
     margin-top: 100px;
@@ -259,6 +259,9 @@
   }
   .yozuvchilar .container .button {
     display: flex;
+  }
+  .authors .bottom {
+    padding: 0;
   }
   .contact-us {
     margin-top: 50px;
