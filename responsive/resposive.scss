@@ -247,7 +247,7 @@
   header {
     padding-top: 100px;
     .slider {
-      width: 400px;
+      width: 120%;
       height: 200px;
       border-radius: 21px;
 
@@ -473,5 +473,13 @@
 
   .kitob-haqida {
     padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .main-books, .books{
+    .bottom{
+      gap: 15px;
+    }
   }
 }
