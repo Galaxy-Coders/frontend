@@ -34,19 +34,27 @@
   --black: #191919;
   --white: #fff;
   --gray: #ffffff1a;
-  --light-gray: rgba(255, 255, 255, 0.60);
+  --light-gray: rgba(255, 255, 255, 0.6);
   --white-gray: #404040;
   --red: #f00;
   --green: lawngreen;
-  --cream: #C9AC8C;
+  --cream: #c9ac8c;
   --light-cream: rgba(201, 172, 140, 0.93);
-  --text-gray: rgba(255, 255, 255, 0.30);
-  --brown: #3C2710;
-  --light-blue: #549FF9;
+  --text-gray: rgba(255, 255, 255, 0.3);
+  --brown: #3c2710;
+  --light-blue: #549ff9;
   --black-blue: #152540;
-  --author-p: rgba(255, 255, 255, 0.80);
-  --author-card-gradient: linear-gradient(209deg, #191919 -1.68%, #212121 135.36%);
-  --book-iqtibos-card-gradient: linear-gradient(264deg, #161616 0%, #1E1E1E 98.06%);
+  --author-p: rgba(255, 255, 255, 0.8);
+  --author-card-gradient: linear-gradient(
+    209deg,
+    #191919 -1.68%,
+    #212121 135.36%
+  );
+  --book-iqtibos-card-gradient: linear-gradient(
+    264deg,
+    #161616 0%,
+    #1e1e1e 98.06%
+  );
   --add-left-bg: rgba(243, 243, 243, 0.93);
   --dark-black: #000;
 }
@@ -184,7 +192,7 @@ li {
 }
 .nav-fixed .profile .sign {
   border-radius: 15px;
-  background: #C9AC8C;
+  background: #c9ac8c;
   padding: 10px 30px;
   color: var(--brown);
   font-family: Steinbeck;
@@ -271,7 +279,7 @@ li {
 }
 .header-fixer .top .profile .sign {
   border-radius: 15px;
-  background: #C9AC8C;
+  background: #c9ac8c;
   padding: 10px 30px;
   color: var(--brown);
   font-family: Steinbeck;
@@ -398,7 +406,7 @@ header .slider {
   position: relative;
   overflow: hidden;
   border-radius: 21px;
-  background: linear-gradient(89deg, #263A3D 70.78%, rgba(25, 25, 25, 0) 105.05%);
+  background: linear-gradient(89deg, #263a3d 70.78%, rgba(25, 25, 25, 0) 105.05%);
 }
 header .slider .slides {
   width: 100%;
@@ -857,7 +865,7 @@ header .search-bar .s-bottom button {
   transition: 0.5s;
   cursor: pointer;
   border-radius: 15px;
-  background: #C9AC8C;
+  background: #c9ac8c;
   color: var(--brown);
   font-family: Steinbeck;
   font-size: 16px;
@@ -950,7 +958,7 @@ footer .right .logo-con img {
   flex-direction: column;
   justify-content: space-between;
 }
-.signup .right form input {
+.signup .right form .first-div input {
   width: 100%;
   font-size: 20px;
   padding: 15px 25px;
@@ -961,38 +969,83 @@ footer .right .logo-con img {
   transition: 0.5s;
   color: gray;
 }
-.signup .right form input:focus {
+.signup .right form .first-div input:focus {
   border: solid #000 1px;
   transform: scale(1.1);
   color: #000;
 }
-.signup .right form input:focus::-moz-placeholder {
+.signup .right form .first-div input:focus::-moz-placeholder {
   color: #000;
 }
-.signup .right form input:focus::placeholder {
+.signup .right form .first-div input:focus::placeholder {
   color: #000;
 }
-.signup .right form input[type=number]::-webkit-inner-spin-button {
-  display: none;
+.signup .right form .first-div input::-webkit-outer-spin-button,
+.signup .right form .first-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.signup .right form button {
+.signup .right form .first-div button {
   width: 100%;
   font-size: 20px;
-  outline: none;
-  margin: 10px 0;
-  cursor: pointer;
-  border: none;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-}
-.signup .right form button a {
-  width: 100%;
-  border-radius: 100px;
-  height: 100%;
-  color: var(--white);
   padding: 15px 25px;
-  background: var(--black-blue);
+  border-radius: 10px;
+  display: block;
+  color: var(--white);
+  background-color: var(--black-blue);
+  cursor: pointer;
+}
+.signup .right form .first-div button:disabled,
+.signup .right form .first-div button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.signup .right form .second-div {
+  display: none;
+}
+.signup .right form .second-div input {
+  width: 100%;
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  outline: none;
+  border: solid gray 1px;
+  margin: 10px 0;
+  transition: 0.5s;
+  color: gray;
+}
+.signup .right form .second-div input:focus {
+  border: solid #000 1px;
+  transform: scale(1.1);
+  color: #000;
+}
+.signup .right form .second-div input:focus::-moz-placeholder {
+  color: #000;
+}
+.signup .right form .second-div input:focus::placeholder {
+  color: #000;
+}
+.signup .right form .second-div input::-webkit-outer-spin-button,
+.signup .right form .second-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.signup .right form .second-div p {
+  font-family: sans-serif;
+  font-size: 13px;
+  display: inline-block;
+}
+.signup .right form .second-div button {
+  width: 100%;
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: block;
+  color: var(--white);
+  background-color: var(--black-blue);
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .signin {

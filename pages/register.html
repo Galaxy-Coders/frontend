@@ -21,16 +21,63 @@
         </p>
         
       </div>
-      <form>
-        <input type="text" placeholder="Ism" required>
-        <input type="text" placeholder="Familiya" required>
-        <input type="number" placeholder="Telefon" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Parol" required>
-        <button type="submit"><a href="../index.html">Ro'yxatdan o'tish</a></button>
+      <form method="">
+        <div class="first-div">
+          <input type="text" placeholder="Ism" name="first_name">
+          <input type="text" placeholder="Familiya" name="last_name">
+          <input type="number" placeholder="Telefon" name="phone">
+          <input type="email" placeholder="Email" name="email">
+          <input type="password" placeholder="Parol" name="password">
+          <button disabled>Davom etish</button>
+        </div>
+
+        <div class="second-div">
+          <input type="number" placeholder="Kod" name="message_code">
+          <p>Biz sizning elektron pochtangizga xabar jo'natdik iltimos shundagi parolni kiriting</p>
+          <button type="submit">Ro'yxatdan o'tish</button>
+        </div>
       </form>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const firstDiv = document.querySelector(".first-div");
+      const secondDiv = document.querySelector(".second-div");
+      const inputs = firstDiv.querySelectorAll("input");
+      const button = firstDiv.querySelector("button");
+
+      function checkInputs() {
+        let allFilled = true;
+        inputs.forEach(input => {
+          if (input.value.trim() === "") {
+            allFilled = false;
+          }
+        });
+
+        button.disabled = !allFilled;
+      }
+
+      function switchDivs() {
+        if (!button.disabled) {
+          firstDiv.style.display = 'none';
+          secondDiv.style.display = 'block';
+        }
+      }
+
+      inputs.forEach(input => {
+        input.addEventListener("input", checkInputs);
+      });
+
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        switchDivs();
+      });
+
+      // Initialize the button state in case inputs are already filled on load
+      checkInputs();
+    });
+  </script>
 </body>
 
 </html>
